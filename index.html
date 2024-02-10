@@ -17,6 +17,7 @@
             font-family: Arial, Helvetica, sans-serif, sans-serif;
             padding: 0;
             text-align: center;
+            align-items: center;
         }
 
         img {
@@ -33,14 +34,14 @@
         }
 
         #topButton {
-            background-color: grey;
-            border: none;
+            background-color: darkgray;
+            border: 2px solid beige;
             color: beige;
             padding: 5px 5px;
             text-align: center;
             text-decoration: none;
             display: inline-block;
-            font-size: 30px;
+            font-size: 15px;
             margin: 4px 2px;
             cursor: pointer;
             border-radius: 12px;
@@ -74,24 +75,26 @@
 
         .splashMenu {
             background-color: darkgray;
-            margin: 150px;
             text-align: center;
-            align-items: center;
             border-radius: 12px;
-            min-height: 20px;
-            min-width: 20px;
             padding: 20px 10px;
             opacity: 0.9;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            max-width: fit-content;
+            margin: auto;
+            margin-top: 10%;
+
         }
         
         #fullAssessment {
-            background-color: darkgray;
+            background-color: beige;
             border: 2px solid darkgray;
-            color: beige;
-            padding: 50px 50px;
+            color: darkgray;
+            padding: 20px 20px;
             text-align: center;
-            text-decoration: none;
-            display: inline-block;
             font-size: 30px;
             margin: 4px 2px;
             border-radius: 12px;
@@ -99,27 +102,14 @@
         }
 
         .button {
-            background-color: beige;
-            border: 2px solid darkgray;
-            color: darkgray;
-            padding: 25px 25px;
-            text-align: center;
-            text-decoration: none;
-            display: inline-block;
-            font-size: 30px;
-            margin: 4px 2px;
-            border-radius: 12px;
-            cursor: pointer;
-        }
-
-        .button div a {
             background-color: darkgray;
-            border: 2px solid darkgray;
+            border: 2px solid beige;
+
             color: beige;
             padding: 25px 25px;
             text-align: center;
             text-decoration: none;
-            display: inline-block;
+            /* display: inline-block; */
             font-size: 20px;
             margin: 4px 2px;
             border-radius: 12px;
@@ -144,12 +134,12 @@
             </div>
 
             <div class="splashMenu">
-                <div class="button">
-                    <a id="fullAssessment" href="fullAssessment.html" >Full Assessment</a>
-                    <div><a href="guidedJournal.html">Guided Journal</a></div>
-                    <div><a href="moodTracking.html">Mood Tracking</a></div>
-                    <div><a href="blankJournal.html">Blank Journal</a></div>
-                </div>
+                <!-- <div class="button"> -->
+                    <a id="fullAssessment" href="fullAssessment.html" class="button">Full Assessment</a>
+                    <a href="guidedJournal.html" class="button">Guided Journal</a>
+                    <a href="moodTracking.html" class="button">Mood Tracking</a>
+                    <a href="blankJournal.html" class="button">Blank Journal</a>
+                <!-- </div> -->
 
                 <a href="createMemories.html" class="button" style="padding: 10px 25px;">Create Memories</a>
                 <br>
@@ -158,13 +148,13 @@
                 <br>
                 <a href="services.html" class="button" style="padding: 10px 25px;">Services</a>
 
-                
+                <br>
+                <a id="topButton" href="#top"> Go to Top </a>
             </div>
             <img src="images/lotus.jpg" alt="Lotus Flower" style="width: 100%; height: 100%;">
         
         
-            <br>
-            <a id="topButton" href="#top"> Go to Top </a>
+
         
         </body>
         </html>
