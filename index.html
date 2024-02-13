@@ -4,126 +4,16 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Open Lotus</title>
-    <style>
-
-        body {
-            /* How do I set a background image but grayscale it and apply a colour hue */
-            background-color:rgb(151, 151, 151);
-            background-repeat: no-repeat;
-            background-attachment: fixed;
-            background-size: cover;
-            background-position: center;
-            /* opacity: 0.3; */
-            font-family: Arial, Helvetica, sans-serif, sans-serif;
-            padding: 0;
-            text-align: center;
-            align-items: center;
-        }
-
-        img {
-            -webkit-filter: grayscale(100%);
-            filter: grayscale(100%);
-            opacity: 0.3;
-            position: absolute;
-            left: 0;
-            top: 0;
-            z-index: -1;
-            background-attachment: fixed;
-            background-position: center;
-
-        }
-
-        #topButton {
-            background-color: darkgray;
-            border: 2px solid beige;
-            color: beige;
-            padding: 5px 5px;
-            text-align: center;
-            text-decoration: none;
-            display: inline-block;
-            font-size: 15px;
-            margin: 4px 2px;
-            cursor: pointer;
-            border-radius: 12px;
-            align-items: center;
-            /* position: fixed; */
-        }
-
-        .navBar {
-            background-color: darkgray;
-            width: 100%;
-            border-radius: 12px;
-            min-height: 20px;
-            padding: 1px 5px;
-            text-align: left;
-        }
-
-        .navBar a {
-            background-color: beige;
-            border: none;
-            color: darkgray;
-            padding: 5px 5px;
-            text-align: center;
-            text-decoration: none;
-            display: inline-block;
-            font-size: 12px;
-            margin: 4px 2px;
-            border-radius: 12px;
-
-            cursor: pointer;
-        }
-
-        .splashMenu {
-            background-color: darkgray;
-            text-align: center;
-            border-radius: 12px;
-            padding: 20px 10px;
-            opacity: 0.9;
-            display: flex;
-            flex-direction: column;
-            justify-content: center;
-            align-items: center;
-            max-width: fit-content;
-            margin: auto;
-            margin-top: 10%;
-
-        }
-        
-        #fullAssessment {
-            background-color: beige;
-            border: 2px solid darkgray;
-            color: darkgray;
-            padding: 20px 20px;
-            text-align: center;
-            font-size: 30px;
-            margin: 4px 2px;
-            border-radius: 12px;
-            cursor: pointer;
-        }
-
-        .button {
-            background-color: darkgray;
-            border: 2px solid beige;
-
-            color: beige;
-            padding: 25px 25px;
-            text-align: center;
-            text-decoration: none;
-            /* display: inline-block; */
-            font-size: 20px;
-            margin: 4px 2px;
-            border-radius: 12px;
-            cursor: pointer;
-        }
-
-
-
-        </style>
-        
-        
+    <link rel="stylesheet" href="/css/style.css">
         <body>
+
+            <div class="background">
+                
+            </div>
+
             <a id="top"></a>
-        
+    
+
             <div class="navBar">
                 <a href="index.html"><strong>Open Lotus</strong></a>
                 <!-- <a href="fullAssessment.html">Full Assessment</a>
@@ -133,9 +23,19 @@
                 <a href="acccount.html"><strong>Account</strong></a>
             </div>
 
+            <div class="navBarFade">
+                <a href="index.html"><strong>Open Lotus</strong></a>
+                <!-- <a href="fullAssessment.html">Full Assessment</a>
+                <a href="guidedJournal.html">Guided Journal</a>
+                <a href="moodTracking.html">Mood Tracking</a>
+                <a href="blankJournal.html">Blank Journal</a> -->
+                <a href="acccount.html"><strong>Account</strong></a>
+            </div>
+
+
             <div class="splashMenu">
                 <!-- <div class="button"> -->
-                    <a id="fullAssessment" href="fullAssessment.html" class="button">Full Assessment</a>
+                    <a href="fullAssessment.html" class="buttonFullAssessment">Full Assessment</a>
                     <a href="guidedJournal.html" class="button">Guided Journal</a>
                     <a href="moodTracking.html" class="button">Mood Tracking</a>
                     <a href="blankJournal.html" class="button">Blank Journal</a>
@@ -151,8 +51,23 @@
                 <br>
                 <a id="topButton" href="#top"> Go to Top </a>
             </div>
-            <img src="images/lotus.jpg" alt="Lotus Flower" style="width: 100%; height: 100%;">
-        
+
+            <div class="splashMenuFade">
+                <a href="fullAssessment.html" class="buttonFullAssessment">Full Assessment</a>
+                <a href="guidedJournal.html" class="button">Guided Journal</a>
+                <a href="moodTracking.html" class="button">Mood Tracking</a>
+                <a href="blankJournal.html" class="button">Blank Journal</a>
+
+                <a href="createMemories.html" class="button" style="padding: 10px 25px;">Create Memories</a>
+                <br>
+                <br>
+                <br>
+                <br>
+                <a href="services.html" class="button" style="padding: 10px 25px;">Services</a>
+
+                <br>
+                <a id="topButton" href="#top"> Go to Top </a>
+            </div>
         
 
         
