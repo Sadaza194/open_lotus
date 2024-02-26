@@ -7,14 +7,35 @@
     <link rel="stylesheet" href="/css/style.css">
 </head>
 <style>
-    .navBar{
-        flex-direction: row-reverse;
+
+    .buttonBeige, .buttonLogin {
+        background-color: beige;
+        color: darkgray;
     }
 
-    .navBarFade{
-        flex-direction: row-reverse;
+        .buttonLogin:hover {
+        cursor: default;
     }
+
+    .buttonLogin input {
+        background-color: rgb(237, 237, 217);
+        border: 1px solid darkgray;
+        padding: 5px 5px;
+        text-align: center;
+        text-decoration: none;
+        font-size: 15px;
+        margin: 4px 2px;
+        border-radius: 12px;
+        cursor: pointer;
+
+    }
+
+    .buttonLogin input:hover {
+        background-color: rgb(15, 15, 15);
+    }
+
 </style>
+
         <body>
 
             <div class="background">
@@ -25,7 +46,7 @@
     
 
             <div class="navBar">
-                <a href="login.html"><strong>Login</strong></a>
+                <a href="index.html"><strong>Open Lotus</strong></a>
                 <!-- <a href="fullAssessment.html">Full Assessment</a>
                 <a href="guidedJournal.html">Guided Journal</a>
                 <a href="moodTracking.html">Mood Tracking</a>
@@ -34,7 +55,7 @@
             </div>
 
             <div class="navBarFade">
-                <a href="login.html"><strong>Login</strong></a>
+                <a href="index.html"><strong>Open Lotus</strong></a>
                 <!-- <a href="fullAssessment.html">Full Assessment</a>
                 <a href="guidedJournal.html">Guided Journal</a>
                 <a href="moodTracking.html">Mood Tracking</a>
@@ -43,43 +64,40 @@
             </div>
 
 
-
-
-
             <div class="splashMenu">
-                <!-- <div class="button"> -->
-                    <a href="fullAssessment.html" class="buttonBeige">Full Assessment</a>
-                    <a href="guidedJournal.html" class="button">Guided Journal</a>
-                    <a href="moodTracking.html" class="button">Mood Tracking</a>
-                    <a href="blankJournal.html" class="button">Blank Journal</a>
-                <!-- </div> -->
-
-                <a href="createMemories.html" class="button" style="padding: 10px 25px;">Create Memories</a>
+                <a class="buttonLogin" style="text-align: right;"> 
+                    Email: 
+                    <input type="text" id="username" name="username">
+                    <br>
+                    Password:
+                    <input type="text" id="password" name="password">
+                </a>
+                <a class="buttonSmall">Login</a>
                 <br>
                 <br>
                 <br>
                 <br>
                 <a href="services.html" class="buttonSmall" style="padding: 10px 25px;">Services</a>
 
-                <br>
-                <a id="topButton" href="#top"> Go to Top </a>
             </div>
 
             <div class="splashMenuFade">
-                <a href="fullAssessment.html" class="buttonBeige">Full Assessment</a>
-                <a href="guidedJournal.html" class="button">Guided Journal</a>
-                <a href="moodTracking.html" class="button">Mood Tracking</a>
-                <a href="blankJournal.html" class="button">Blank Journal</a>
+                <a class="buttonLogin" style="text-align: right;"> 
+ 
+                    Email: 
+                    <input type="text" id="username" name="username">
+                    <br>
+                    Password:
+                    <input type="text" id="password" name="password">
+                </a>
+                <a class="buttonSmall">Login</a>
 
-                <a href="createMemories.html" class="button" style="padding: 10px 25px;">Create Memories</a>
                 <br>
                 <br>
                 <br>
                 <br>
                 <a href="services.html" class="buttonSmall" style="padding: 10px 25px;">Services</a>
 
-                <br>
-                <a id="topButton" href="#top"> Go to Top </a>
             </div>
         
 

@@ -30,6 +30,44 @@ body {
     color: darkgray;
 }
 
+nav, nav .fade{
+    width: 90%;
+    border-radius: 12px;
+    min-height: 20px;
+    max-height: fit-content;
+    padding: 2px 5px;
+    display: flex;
+    flex-direction: row;
+    position: absolute;
+    top: 5px;
+    margin: 5px;
+}
+
+nav .fade {
+    background-color: rgb(53, 53, 53);
+    z-index: 0;
+    opacity: 0.3;
+}
+
+nav a {
+    background-color: beige;
+    border: none;
+    color: darkgray;
+    padding: 5px 15px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 12px;
+    margin: 4px 2px;
+    border-radius: 12px;
+    cursor: pointer;
+}
+
+nav a:hover{
+    background-color: darkgray;
+    color: beige;
+}
+
 .navBar, .navBarFade{
     width: 90%;
     border-radius: 12px;
@@ -90,7 +128,7 @@ body {
 }
 
 
-.button, .buttonFullAssessment {
+.button, .buttonBeige, .buttonSmall, .buttonLogin{
     background-color: darkgray;
     border: 2px solid beige;
     color: beige;
@@ -103,20 +141,32 @@ body {
     cursor: pointer;
 }
 
-.buttonFullAssessment {
+.buttonSmall {
+    padding: 10px 10px;
+    font-size: 15px;
+}
+
+.buttonSmall:hover {
     background-color: beige;
     color: darkgray;
 }
 
-.button:hover, .buttonFullAssessment:hover {
+.buttonBeige {
     background-color: beige;
     color: darkgray;
 }
 
-.buttonFullAssessment:hover {
+.button:hover {
+    background-color: beige;
+    color: darkgray;
+}
+
+.buttonBeige:hover {
     background-color: darkgray;
     color: beige;
 }
+
+
 
 .background {
     /* height: 100vh; */
