@@ -30,7 +30,8 @@ body {
     color: darkgray;
 }
 
-nav, nav .fade{
+nav{
+    background-color: rgb(53, 53, 53, 0.3);
     width: 90%;
     border-radius: 12px;
     min-height: 20px;
@@ -41,12 +42,6 @@ nav, nav .fade{
     position: absolute;
     top: 5px;
     margin: 5px;
-}
-
-nav .fade {
-    background-color: rgb(53, 53, 53);
-    z-index: 0;
-    opacity: 0.3;
 }
 
 nav a {
@@ -68,7 +63,7 @@ nav a:hover{
     color: beige;
 }
 
-.navBar, .navBarFade{
+.navBar{
     background-color: rgb(53, 53, 53, 0.3);
     width: 90%;
     border-radius: 12px;
@@ -96,12 +91,12 @@ nav a:hover{
     cursor: pointer;
 }
 
-.navBar a:hover, .navBarFade a:hover {
+.navBar a:hover{
     background-color: darkgray;
     color: beige;
 }
 
-.splashMenu, .splashMenuFade {
+.splashMenu{
     background-color: rgb(169, 169, 169, 0.3);
     text-align: center;
     border-radius: 12px;
