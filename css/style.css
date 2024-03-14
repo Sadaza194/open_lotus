@@ -112,6 +112,46 @@ nav a:hover{
     top: 10%; right: 0; bottom: 0; left: 0;
 }
 
+.questionBox{
+    background-color: rgb(169, 169, 169, 0.3);
+    text-align: center;
+    border-radius: 12px;
+    padding: 20px 10px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    max-width: fit-content;
+    max-height: fit-content;
+    margin: auto;
+    position: absolute;
+    top: 10%; right: 0; bottom: 0; left: 0;
+}
+
+.questionBox h1{
+    color: beige;
+}
+
+.questionBox h2{
+    color: beige;
+}
+
+.questionBox h3{
+    color: beige;
+}
+
+.questionBox h4{
+    color: beige;
+}
+
+.questionBox p{
+    color: beige;
+}
+
+.questionBox label{
+    color: beige;
+}
+
 
 .button, .buttonBeige, .buttonSmall, .buttonLogin{
     background-color: darkgray;
