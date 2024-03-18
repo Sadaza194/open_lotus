@@ -1,2 +1,0 @@
-Test File
-Chris connecting to Git repo.
