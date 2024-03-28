@@ -75,15 +75,22 @@ WSGI_APPLICATION = 'lotus_django.wsgi.application'
 # https://docs.djangoproject.com/en/2.2/ref/settings/#databases
 
 DATABASES = {
-        'default': {
-            'ENGINE': 'django.db.backends.mysql',
-            'NAME': 'OpenLotus',
-            'USER':'admin',
-            'PASSWORD': 'rmE4CgGP2WDq7sNvVzQZu8',
-            'HOST':'openlotus-database.c5o6um8yax9u.ca-central-1.rds.amazonaws.com',
-            'PORT':'3306',
-        }
+    "default": {
+        "ENGINE": "django.db.backends.sqlite3",
+        "NAME": "mydatabase",
     }
+}
+
+# DATABASES = {
+#         'default': {
+#             'ENGINE': 'django.db.backends.mysql',
+#             'NAME': 'OpenLotus',
+#             'USER':'admin',
+#             'PASSWORD': 'rmE4CgGP2WDq7sNvVzQZu8',
+#             'HOST':'openlotus-database.c5o6um8yax9u.ca-central-1.rds.amazonaws.com',
+#             'PORT':'3306',
+#         }
+#     }
 
 
 # Password validation
