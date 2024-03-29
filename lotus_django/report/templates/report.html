@@ -1,0 +1,8 @@
+<h1>This is a report</h1>
+<h2>Name: {{ name }}</h2>
+
+{% if mood %}
+<h3>Your mood today is {{ mood }}</h3>
+{% else %}
+<h3>There is no mood data for today</h3>
+{% endif %}
