@@ -5,8 +5,8 @@ from django.http import HttpResponse
 # Create your views here.
 def base(response):
     # page = page + ".html"
-    return render(response, "lotus/base.html", {})
+    return render(response, "base.html", {})
 
 def page(response, page):
     page = page + ".html"
-    return render(response, "lotus/home.html", {})
+    return render(response, "home.html", {})
