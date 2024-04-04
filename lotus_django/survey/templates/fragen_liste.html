@@ -1,0 +1,26 @@
+{% extends 'base.html' %}
+
+{% block content %}
+<h1>Fragen</h1>
+
+<table>
+    <thead>
+        <tr>
+            <th>Text</th>
+            <th>Typ</th>
+            <th>Frequenz</th>
+            <th>Letzte Beantwortung</th>
+        </tr>
+    </thead>
+    <tbody>
+        {% for frage in fragen %}
+        <tr>
+            <td>{{ frage.text }}</td>
+            <td>{{ frage.typ }}</td>
+            <td>{{ frage.frequenz }}</td>
+            <td>{{ frage.letzte_beantwortung }}</td>
+        </tr>
+        {% endfor %}
+    </tbody>
+</table>
+{% endblock %}

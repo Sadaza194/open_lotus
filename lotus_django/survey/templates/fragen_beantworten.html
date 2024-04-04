@@ -1,0 +1,26 @@
+{% extends 'base.html' %}
+
+{% block content %}
+<h1>Fragen beantworten</h1>
+
+<form action="{% url 'fragen_beantworten' %}" method="post">
+{% csrf_token %}
+{% for frage in fragen %}
+<div class="frage">
+    <h2>{{ frage.text }}</h2>
+    {% if frage.typ == 'likert' %}
+    <ul>
+        <li><input type="radio" name="{{ frage.id }}" value="1"> Sehr gut</li>
+        <li><input type="radio" name="{{ frage.id }}" value="2"> Gut</li>
+        <li><input type="radio" name="{{ frage.id }}" value="3"> Neutral</li>
+        <li><input type="radio" name="{{ frage.id }}" value="4"> Schlecht</li>
+        <li><input type="radio" name="{{ frage.id }}" value="5"> Sehr schlecht</li>
+    </ul>
+    {% elif frage.typ == 'kurztext' %}
+    <textarea name="{{ frage.id }}"></textarea>
+    {% endif %}
+</div>
+{% endfor %}
+<button type="submit">Speichern</button>
+</form>
+{% endblock %}
