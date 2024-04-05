@@ -6,7 +6,7 @@ from django.http import HttpResponse
 # Create your views here.
 def base(response):
     # page = page + ".html"
-    return render(response, "base.html", {})
+    return render(response, "index.html", {})
 
 @login_required(login_url='/signin')
 def page(response, page):
