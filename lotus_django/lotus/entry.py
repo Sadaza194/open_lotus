@@ -1,6 +1,6 @@
 from django.db import models
 from django.utils import timezone
-from .user import User 
+from django.contrib.auth.models import User  # Import the User model from Django
 
 class Entry(models.Model):
     entry_id = models.AutoField(primary_key=True)
