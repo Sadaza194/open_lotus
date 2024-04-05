@@ -15,9 +15,11 @@ Including another URLconf
 """
 from django.contrib import admin
 from django.urls import path, include
+from memories import views
 
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('', include("lotus.urls")),
-    path('report/', include('report.urls'))
+    path('report/', include('report.urls')),
+    path('create_memories/', views.create_memories, name='create_memories')
 ]
