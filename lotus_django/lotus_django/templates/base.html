@@ -207,11 +207,29 @@
         }
     }
 
+    .loggedInUser{
+        background-color: beige;
+        border:5px rgb(53, 53, 53, 0.6) solid;
+        border-radius: 12px;
+        color: darkgray;
+        font-size: 25px;
+        font-size: 12px;
+
+        padding: 5px 15px;
+        display: block;
+        margin: 4px 2px;
+        cursor: pointer;
+        position: absolute;
+        right: 5px;
+    }
+
 </style>
         <body>
 
             <a id="top"></a>
     
+            <!-- I want to add a widget showing the current logged in user to the right side of the navBar -->
+            
             <div class="navBar">
                 <a href="{% url 'logout' %}"><strong>Logout</strong></a>
                 <a href="{% url 'login' %}"><strong>Login</strong></a>
@@ -219,8 +237,19 @@
                 <a href="{% url 'questions' %}"><strong>Questions</strong></a>
                 <a href="{% url 'journal' %}"><strong>Journal</strong></a>
                 <a href="{% url 'create_memories' %}"><strong>Create Memories</strong></a>
-                <a href="{% url 'settings' %}"><strong>Settings</strong></a>
+
+
+                <a style="position: absolute; right: 5px;" href="{% url 'settings' %}"><strong>
+                    {% if user.is_authenticated %}
+                        <p style="color: darkgray">Welcome, {{ user.username }}!</p>
+                    {% else %}
+                        <p style="color: darkgray">Welcome, Guest!</p>
+                    {% endif %}
+                </strong></a>
+
+                
             </div>
+
 
 
             <br>
