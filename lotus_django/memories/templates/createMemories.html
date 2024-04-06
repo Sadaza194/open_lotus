@@ -1,0 +1,15 @@
+{% extends "base.html"%}
+
+{% block content %}
+<form class="form" method="POST">
+    {% csrf_token %}
+    <h1>Create a Memory</h1>
+    <h2>Memory:</h2><br>
+    <select name="emotion">
+        <option value="happy">Happy</option>
+        <option value="sad">Sad</option>
+    </select><br>
+    <textarea name="memory_text"></textarea><br>
+    <input type="submit" value="Submit">
+</form>
+{% endblock %}

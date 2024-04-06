@@ -15,10 +15,19 @@ Including another URLconf
 """
 from django.contrib import admin
 from django.urls import path, include
+from .views import register, signin, logout_request
+from questions.views import create_question
 
 urlpatterns = [
     path('admin/', admin.site.urls),
-    path('', include("lotus.urls")),
+    # path('', include("lotus.urls")),
+    # path('report/', include('report.urls')),
+    # path('journal/', include('journal.urls')),
+
+    path('index/', include("lotus.urls")),
     path('report/', include('report.urls')),
-    path('journal/', include('journal.urls'))
+    path('register/', register, name='register'),
+    path('', signin, name='signin'),
+    path('logout',logout_request,name='logout'),
+    path("questions/", include('questions.urls'))
 ]
