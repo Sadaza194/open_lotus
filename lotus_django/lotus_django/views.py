@@ -26,7 +26,7 @@ def register(request, *args, **kwargs):
     return render(request, templates, context)
 
 
-def signin(request):
+def login(request, user):
     if request.method == "POST":
         form = AuthenticationForm(request=request, data=request.POST)
         if form.is_valid():
@@ -35,9 +35,9 @@ def signin(request):
             user = authenticate(username=username, password=password)
             if user is not None:
                 login(request, user)
-                return redirect("index/")
+                return redirect("home")
             else:
-                messages.error(request, "inavlid username or password")
+                messages.error(request, "invalid username or password")
         else:
             messages.error(request, "invalid credential")
     form = AuthenticationForm()
@@ -49,7 +49,7 @@ def signin(request):
 def logout_request(request):
     logout(request)
     messages.error(request, "Logout successfully")
-    return redirect("signin")
+    return redirect("login")
 
 
 # Create your views here.
@@ -84,7 +84,7 @@ def memories(request):
     return render(request, "lotus/memories.html", {'form': form})
 
 
-@login_required(login_url='/signin')
+@login_required(login_url='login/')
 def page(response, page):
     page = page + ".html"
     return render(response, "home.html", {})
