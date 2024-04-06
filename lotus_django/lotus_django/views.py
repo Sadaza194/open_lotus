@@ -14,7 +14,7 @@ def register(request):
             user = form.save()
             login(request, user)
             messages.success(request, 'Your profile is updated successfully!')
-            return redirect("base.html")
+            return redirect("index/")
         else:
             form = NewUserForm(request.POST)
             context = {"form": form}
@@ -36,7 +36,7 @@ def signin(request):
             user = authenticate(username=username, password=password)
             if user is not None:
                 login(request, user)
-                return redirect("base.html")
+                return redirect("index/")
             else:
                 messages.error(request, "inavlid username or password")
         else:

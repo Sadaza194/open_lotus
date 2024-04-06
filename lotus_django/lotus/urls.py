@@ -1,8 +1,8 @@
-from django.urls import path
+from django.urls import path, include
 from . import views
 
 urlpatterns = [
-    path("base", views.base, name="base"),
+    path("", views.base, name="base"),
     path("<str:page>", views.page, name="page"),
-
+    path('create_memories/', include('memories.urls')),
 ]
