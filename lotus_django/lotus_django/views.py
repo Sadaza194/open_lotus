@@ -53,6 +53,7 @@ def logout_request(request):
 
 
 # Create your views here.
+@login_required(login_url='login/')
 def home(response):
     return render(response, "home.html", {})
 
@@ -63,28 +64,21 @@ def home(response):
 #def login(response):
     #return render(response, "lotus/login.html", {})
 
+@login_required(login_url='login/')
 def settings(response):
     return render(response, "lotus/settings.html", {})
 
-class JournalForm(forms.Form):
-    text = forms.CharField(widget=forms.Textarea(attrs={'class': 'text-input'}))
-
-def journal(request):
-    form = JournalForm()
-    return render(request, 'lotus/journal.html', {'form': form})
-
+@login_required(login_url='login/')
 def questions(response):
     return render(response, "lotus/questions.html", {})
 
+@login_required(login_url='login/')
 class MemoriesForm(forms.Form):
     text = forms.CharField(widget=forms.Textarea(attrs={'class': 'text-input-memories'}))
 
+@login_required(login_url='login/')
 def memories(request):
     form = MemoriesForm()
     return render(request, "lotus/memories.html", {'form': form})
 
 
-@login_required(login_url='login/')
-def page(response, page):
-    page = page + ".html"
-    return render(response, "home.html", {})

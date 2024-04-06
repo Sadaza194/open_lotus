@@ -40,7 +40,8 @@ INSTALLED_APPS = [
     'lotus.apps.LotusConfig',
     'report',
     'memories',
-    'questions'
+    'questions',
+    'journal'
 ]
 
 MIDDLEWARE = [

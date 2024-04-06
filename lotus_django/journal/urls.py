@@ -2,7 +2,7 @@ from django.urls import path, include
 from . import views
 
 urlpatterns = [
-    # path("", views.journal, name="journal")
+    path("journal", views.journal, name="journal")
 
 
 ]

@@ -7,3 +7,4 @@ class Memory(models.Model):
     emotion = models.CharField(max_length=100)
     text = models.TextField()
     date = models.DateField()
+    
