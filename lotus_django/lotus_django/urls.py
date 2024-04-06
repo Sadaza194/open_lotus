@@ -28,5 +28,6 @@ urlpatterns = [
     path('report/', include('report.urls')),
     path('register/', register, name='register'),
     path('logout',logout_request,name='logout'),
-    path("questions/", include('questions.urls'))
+    path("questions/", include('questions.urls')),
+    path('memories/', include('memories.urls')),
 ]

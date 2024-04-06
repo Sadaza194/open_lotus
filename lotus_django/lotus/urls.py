@@ -10,9 +10,9 @@ urlpatterns = [
 
     path("questions/", views.questions, name="questions"),
 
-    path("memories/", views.memories, name="memories"),
+    # path("memories/", views.memories, name="memories"),
 
-    path('create_memories/', include('memories.urls')),
+    # path('create_memories/', include('memories.urls')),
     
-    path("questions/", include('questions.urls'))
+    # path("questions/", include('questions.urls'))
 ]
