@@ -30,39 +30,6 @@ body {
     color: darkgray;
 }
 
-nav{
-    background-color: rgb(53, 53, 53, 0.3);
-    width: 90%;
-    border-radius: 12px;
-    min-height: 20px;
-    max-height: fit-content;
-    padding: 2px 5px;
-    display: flex;
-    flex-direction: row;
-    position: absolute;
-    top: 5px;
-    margin: 5px;
-}
-
-nav a {
-    background-color: beige;
-    border: none;
-    color: darkgray;
-    padding: 5px 15px;
-    text-align: center;
-    text-decoration: none;
-    display: inline-block;
-    font-size: 12px;
-    margin: 4px 2px;
-    border-radius: 12px;
-    cursor: pointer;
-}
-
-nav a:hover{
-    background-color: darkgray;
-    color: beige;
-}
-
 .navBar{
     background-color: rgb(53, 53, 53, 0.3);
     width: 90%;
@@ -79,15 +46,14 @@ nav a:hover{
 
 .navBar a{
     background-color: beige;
-    border: none;
+    border:5px rgb(53, 53, 53, 0.6) solid;
+    border-radius: 12px;
     color: darkgray;
+    font-size: 25px;
     padding: 5px 15px;
-    text-align: center;
-    text-decoration: none;
-    display: inline-block;
+    display: block;
     font-size: 12px;
     margin: 4px 2px;
-    border-radius: 12px;
     cursor: pointer;
 }
 
@@ -191,14 +157,12 @@ nav a:hover{
     color: beige;
 }
 
-
-
 .background {
     /* height: 100vh; */
     height: calc(120vh - 275px);
     margin-top: 50px;
     /* subtract the height of the header */
-    background-image: url("../images/scroll.jpg");
+    background-image: url("scroll.jpg");
     background-size: cover;
     background-repeat: no-repeat;
     background-attachment: fixed;
@@ -216,4 +180,43 @@ nav a:hover{
     100% {
         background-position: 100% 0%;
     }
+}
+
+
+.text-input {
+    width: 80%;
+    height: 400px;
+    font-size: 18px;
+    padding: 10px;
+    margin-top: 50px;
+    margin: 50px 20px 20px 20px;
+    background-color: beige;
+    border: none;
+    color:dimgrey;
+    /* padding: 5px 15px; */
+    /* text-align: center; */
+    text-decoration: none;
+    display: inline-block;
+    border-radius: 12px;
+    cursor:text;
+    align-items: center;
+}
+
+.text-input-memories {
+    width: 80%;
+    height: 200px;
+    font-size: 18px;
+    padding: 10px;
+    margin-top: 50px;
+    margin: 50px 20px 20px 20px;
+    background-color: beige;
+    border: none;
+    color:dimgrey;
+    /* padding: 5px 15px; */
+    /* text-align: center; */
+    text-decoration: none;
+    display: inline-block;
+    border-radius: 12px;
+    cursor:text;
+    align-items: center;
 }

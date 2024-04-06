@@ -6,7 +6,6 @@ body {
     padding: 0;
     text-align: center;
     align-items: center;
-    
 }
 
 #topButton {
@@ -152,7 +151,6 @@ nav a:hover{
     color: beige;
 }
 
-
 .button, .buttonBeige, .buttonSmall, .buttonLogin{
     background-color: darkgray;
     border: 2px solid beige;
@@ -190,8 +188,6 @@ nav a:hover{
     background-color: darkgray;
     color: beige;
 }
-
-
 
 .background {
     /* height: 100vh; */

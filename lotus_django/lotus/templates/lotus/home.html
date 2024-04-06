@@ -1,1 +1,24 @@
 {% extends 'lotus/base.html' %}
+
+{% block content %}
+            
+<div class="background">
+    <img src="scroll.jpg">
+</div>
+
+<div class="splashMenu">
+    <a href="{% url 'questions' %}" class="buttonBeige">Questions</a>
+    <a href="{% url 'journal' %}" class="button">Journal</a>
+    <a href="{% url 'memories' %}" class="button">Create Memories</a>
+    <br>
+    <br>
+    <br>
+    <br>
+    <a href="{% url 'settings' %}" class="buttonSmall" style="padding: 10px 25px;">Settings</a>
+
+    <br>
+    <a id="topButton" href="#top"> Go to Top </a>
+</div>
+
+
+{% endblock %}

@@ -1,0 +1,15 @@
+{% extends 'lotus/base.html' %}
+
+{% block content %}
+
+<h2>Create Memories</h2>
+
+<form method="POST">
+    {% csrf_token %}
+    {{ form.text }}
+    <br>
+    <input class="buttonSmall" type="submit" value="Submit">
+</form>
+
+
+{% endblock %}
