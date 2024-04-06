@@ -26,7 +26,7 @@ def register(request, *args, **kwargs):
     return render(request, templates, context)
 
 
-def login(request, user):
+def login_user(request):
     if request.method == "POST":
         form = AuthenticationForm(request=request, data=request.POST)
         if form.is_valid():
