@@ -1,0 +1,35 @@
+
+
+{% block content %}
+<center>
+
+    <b><h2>Login here</h2></b>
+
+<form class="form" method="POST">
+    {% csrf_token %}
+         {% for message in messages %}
+            {{message}}
+         {% endfor %}<br>
+        {% for forms in form %}
+            {{ forms.label_tag }} <br>
+            {{ forms }} {{ forms.errors }}<br>
+        {% endfor %}
+        <button style="background-color: blanchedalmond; 
+  border: none;
+  color: black;
+  padding: 10px 20px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  border-radius: 10px;
+  font-size: 16px;
+  margin: 4px 2px;
+  cursor: pointer;" type="submit">Login
+        </button>
+        <div>
+        </div>
+        New User <a href="{% url 'register' %}" >Register</a> here
+
+</form>
+</center>
+{% endblock %}
