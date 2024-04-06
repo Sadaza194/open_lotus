@@ -24,7 +24,7 @@ urlpatterns = [
     # path('report/', include('report.urls')),
     # path('journal/', include('journal.urls')),
 
-    path('index/', include("lotus.urls")),
+    path('', include("lotus.urls")),
     path('report/', include('report.urls')),
     path('register/', register, name='register'),
     path('', signin, name='signin'),

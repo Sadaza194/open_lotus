@@ -6,16 +6,16 @@ from .forms import NewUserForm
 from django.contrib import messages
 from django.contrib.auth.forms import AuthenticationForm
 
-def register(request):
+def register(request, *args, **kwargs):
     if request.method == 'POST':
-        form = NewUserForm(request.POST)
+        form = NewUserForm(request.POST or None)
         if form.is_valid():
             user = form.save()
             login(request, user)
             messages.success(request, 'Your profile is updated successfully!')
-            return redirect("index/")
+            return redirect("home")
         else:
-            form = NewUserForm(request.POST)
+            form = NewUserForm(request.POST or None)
             context = {"form": form}
             messages.success(request, 'invalid password!')
             templates = "register.html"
@@ -54,14 +54,14 @@ def logout_request(request):
 
 # Create your views here.
 def home(response):
-    return render(response, "lotus/home.html", {})
+    return render(response, "home.html", {})
 
 # def base(response):
 #     # page = page + ".html"
 #     return render(response, "index.html", {})
 
-def login(response):
-    return render(response, "lotus/login.html", {})
+#def login(response):
+    #return render(response, "lotus/login.html", {})
 
 def settings(response):
     return render(response, "lotus/settings.html", {})
