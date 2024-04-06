@@ -15,11 +15,9 @@ Including another URLconf
 """
 from django.contrib import admin
 from django.urls import path, include
-from survey.views import FragenBeantwortenView
 
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('', include("lotus.urls")),
     path('report/', include('report.urls')),
-    path('fragen/beantworten/', FragenBeantwortenView.as_view(), name='fragen_beantworten'),
 ]
