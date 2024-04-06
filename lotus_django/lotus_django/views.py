@@ -57,13 +57,6 @@ def logout_request(request):
 def home(response):
     return render(response, "home.html", {})
 
-# def base(response):
-#     # page = page + ".html"
-#     return render(response, "index.html", {})
-
-#def login(response):
-    #return render(response, "lotus/login.html", {})
-
 @login_required(login_url='login/')
 def settings(response):
     return render(response, "lotus/settings.html", {})

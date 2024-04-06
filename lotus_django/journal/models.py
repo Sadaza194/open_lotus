@@ -3,7 +3,7 @@ from django.utils import timezone
 from lotus.models import User 
 
 class Entry(models.Model):
-    entry_id = models.AutoField(primary_key=True)
+    # entry_id = models.AutoField(primary_key=True)
     user = models.ForeignKey(User, on_delete=models.CASCADE)
     date = models.DateTimeField(default=timezone.now)
     is_journal = models.BooleanField(default=True)
@@ -12,7 +12,7 @@ class Entry(models.Model):
         return f"Entry {self.entry_id} by {self.user.email}"
 
 class Journal(models.Model):
-    journal_id = models.AutoField(primary_key=True)
+    # journal_id = models.AutoField(primary_key=True)
     entry = models.ForeignKey(Entry, on_delete=models.CASCADE)
     text = models.TextField()
 

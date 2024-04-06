@@ -1,8 +1,10 @@
 from django.urls import path, include
 from . import views
+from lotus_django.views import home
 
 urlpatterns = [
-    path("journal", views.journal, name="journal")
+    path("", views.journal, name="journal"),
+    path("home/", home, name="home"),
 
 
 ]

@@ -22,12 +22,12 @@ urlpatterns = [
     path('admin/', admin.site.urls),
     # path('', include("lotus.urls")),
     # path('report/', include('report.urls')),
-    # path('journal/', include('journal.urls')),
     path('login/', login_user, name='login'),
     path('', include("lotus.urls")),
     path('report/', include('report.urls')),
     path('register/', register, name='register'),
     path('logout',logout_request,name='logout'),
+    path('journal/', include('journal.urls')),
     path("questions/", include('questions.urls')),
     path('memories/', include('memories.urls')),
 ]
