@@ -2,7 +2,10 @@
 
 {% block content %}
 
-<h2>Journal Entry</h2>
+<h2>Journal</h2>
+
+
+<h3>New Journal Entry:</h3>
 
 <form method="POST">
     {% csrf_token %}
@@ -10,6 +13,13 @@
     <br>
     <input class="buttonSmall" type="submit" value="Submit">
 </form>
+
+<h3>Journal Entries:</h3>
+
+{% for journal in journals %}
+    <p>{{ journal }}</p>
+    <br>
+{% endfor %}
 
 
 {% endblock %}

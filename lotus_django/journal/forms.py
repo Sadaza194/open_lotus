@@ -1,5 +1,4 @@
 from django import forms
-
 from journal.models import Journal
 
 class JournalForm(forms.ModelForm):
@@ -9,4 +8,5 @@ class JournalForm(forms.ModelForm):
         model = Journal
         fields = [
             'text'
+            
         ]

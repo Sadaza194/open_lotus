@@ -1,7 +1,7 @@
 from django import forms
 from django.shortcuts import render
 from django.shortcuts import redirect
-from journal.models import Entry
+from journal.models import Journal
 from .forms import JournalForm
 from django.contrib.auth.decorators import login_required
 
