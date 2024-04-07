@@ -4,7 +4,6 @@ from . import views
 
 urlpatterns = [
     path("", views.journal, name="journal"),
-    # path("home/", home, name="home"),
 
 
 ]
