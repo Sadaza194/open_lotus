@@ -4,8 +4,17 @@ from django.shortcuts import redirect
 from django.utils import timezone
 from .forms import MemoryForm
 from django.contrib.auth.decorators import login_required
+from memories.models import Memory
 
 # Create your views here.
+
+@login_required(login_url='login/')
+def view_memories(request, *args, **kwargs):
+    user_memories = Memory.objects.all().filter(user=request.user)
+    context = {
+        "memories":user_memories
+    }
+    return render(request, 'viewMemories.html', context)
     
 @login_required(login_url='login/')
 def create_memories(request):
