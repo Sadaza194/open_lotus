@@ -34,4 +34,4 @@ def create_memory(request):
             return redirect('home')
     else:
         form = MemoryForm()
-    return render(request, 'createMemories.html', {'form': form})
+    return render(request, 'createMemory.html', {'form': form})
