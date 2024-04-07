@@ -55,7 +55,11 @@ def logout_request(request):
 # Create your views here.
 @login_required(login_url='login/')
 def home(response):
-    return render(response, "home.html", {})
+    is_admin = response.user.is_superuser
+    context = {
+        "admin": is_admin
+    }
+    return render(response, "home.html", context)
 
 @login_required(login_url='login/')
 def settings(response):
