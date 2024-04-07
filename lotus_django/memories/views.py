@@ -13,7 +13,8 @@ def create_memories(request):
         memory_text = request.POST.get('memory_text')
         emotion = request.POST.get('emotion')
         memory_date = date.today()
-        new_memory = Memory(emotion=emotion, text=memory_text, date=memory_date)
+        memory_user = request.user
+        new_memory = Memory(emotion=emotion, text=memory_text, date=memory_date, user=memory_user)
         new_memory.save()
         messages.success(request, 'Memory saved!')
         return render(request, 'createMemories.html')
