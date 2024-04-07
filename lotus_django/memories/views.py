@@ -9,6 +9,11 @@ from memories.models import Memory
 # Create your views here.
 
 @login_required(login_url='login/')
+def memories_base(request, *args, **kwargs):
+    context = {}
+    return render(request, 'memoriesBase.html', context)
+
+@login_required(login_url='login/')
 def view_memories(request, *args, **kwargs):
     user_memories = Memory.objects.all().filter(user=request.user)
     context = {
@@ -17,7 +22,7 @@ def view_memories(request, *args, **kwargs):
     return render(request, 'viewMemories.html', context)
     
 @login_required(login_url='login/')
-def create_memories(request):
+def create_memory(request):
     if request.method == 'POST':
         form = MemoryForm(request.POST)
         if form.is_valid():

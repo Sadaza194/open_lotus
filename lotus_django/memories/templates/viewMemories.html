@@ -3,11 +3,9 @@
 {% block content %}
 <div>
 
-    <h2> Memories </h2>
+    <h2> Your Memories </h2>
 
     <hr>
-
-    <a href="{% url 'create_memories' %}" class="button">Create Memories</a>
 
 </div>
 
@@ -17,6 +15,7 @@
     <h3> {{ memory.date }} </h3>
     <h4> Emotion: {{ memory.emotion }} </h4>
     <p> {{memory.text}} </p>
+    <br>
 </div>
 {% endfor %}
 </div>
