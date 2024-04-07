@@ -16,7 +16,7 @@
 
 <h3>Journal Entries:</h3>
 
-{% for journal in journals %}
+{% for journal in user.journals.all %}
     <p>{{ journal }}</p>
     <br>
 {% endfor %}

@@ -8,5 +8,5 @@ class Memory(models.Model):
     date = models.DateField()
     user = models.ForeignKey(User, on_delete=models.CASCADE)
     
-    def __str__(self):
-        return f"{self.date} \n \t {self.emotion} \n \t {self.text}"
+    # def __str__(self):
+    #     return f"{self.date} \n \t {self.emotion} \n \t {self.text}"

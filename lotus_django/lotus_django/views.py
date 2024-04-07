@@ -59,19 +59,6 @@ def home(response):
 
 @login_required(login_url='login/')
 def settings(response):
-    return render(response, "lotus/settings.html", {})
-
-@login_required(login_url='login/')
-def questions(response):
-    return render(response, "lotus/questions.html", {})
-
-@login_required(login_url='login/')
-class MemoriesForm(forms.Form):
-    text = forms.CharField(widget=forms.Textarea(attrs={'class': 'text-input-memories'}))
-
-@login_required(login_url='login/')
-def memories(request):
-    form = MemoriesForm()
-    return render(request, "lotus/memories.html", {'form': form})
+    return render(response, "settings.html", {})
 
 
