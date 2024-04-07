@@ -1,6 +1,6 @@
 from django.db import models
 from django.utils import timezone
-from lotus.models import User 
+from django.contrib.auth.models import User
 
 class Entry(models.Model):
     # id = models.AutoField(primary_key=True, default=0)
