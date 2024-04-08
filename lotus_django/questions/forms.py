@@ -13,3 +13,21 @@ class CreateQuestionForm(forms.ModelForm):
             'text',
             'frequency'
         ]
+        
+class AnswerTextQuestionForm(forms.ModelForm):
+    text = forms.CharField(widget=forms.Textarea(attrs={'class': 'text-input'}))
+
+    class Meta:
+        model = Question
+        fields = [
+            'text'
+        ]
+        
+class AnswerLikertQuestionForm(forms.ModelForm):
+    value = forms.IntegerField()
+
+    class Meta:
+        model = Question
+        fields = [
+            'value'
+        ]
