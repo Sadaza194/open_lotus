@@ -5,10 +5,11 @@ from django.contrib.auth.models import User
 
 
 class Question(models.Model):
-    text = models.TextField(max_length=255, null=False)
-    type = models.IntegerField(null=False)
-    active = models.BooleanField(default=True, null=False)
+    type = models.CharField(null=False, max_length=20)
+    text = models.TextField()
     frequency = models.CharField(max_length=20, null=False, default="daily")
+    active = models.BooleanField(default=True, null=False)
+    creator = models.ForeignKey(User, on_delete=models.CASCADE)
 
 
 class QuestionTracker(models.Model):
