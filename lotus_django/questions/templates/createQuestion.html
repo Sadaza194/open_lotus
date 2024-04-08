@@ -5,17 +5,17 @@
 <form method='POST'> 
     {% csrf_token %}
     <!-- {{ form.as_p }} -->
-    <select class="buttonBeige" name='type'>
+    <select class="dropdown" name='type'>
         <option value='text'>Text</option>
         <option value='likert'>Likert</option>
     </select><br>
-    <textarea name='text', class="text-input-memories", placeholder='Question text...'/></textarea><br>
-    <select class="buttonBeige" name='frequency'>
+    <select class="dropdown" name='frequency'>
         <option value='daily'>Daily</option>
         <option value='weekly'>Weekly</option>
         <option value='monthly'>Monthly</option>
         <option value='yearly'>Yearly</option>
     </select><br>
+    <textarea name='text', class="text-input-memories", placeholder='Question text...'/></textarea><br>
     <input class="buttonSmall" type='submit', value='save'/>
 </form>
 
