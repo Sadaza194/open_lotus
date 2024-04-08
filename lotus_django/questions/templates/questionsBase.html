@@ -1,0 +1,18 @@
+{% extends "base.html"%}
+
+{% block content %}
+
+<h2> Questions </h2>
+
+<hr>
+
+<div class="splashMenu">
+    <a href="{% url 'answer_question' %}" class="button">Answer Question</a>
+    <br>
+    <a href="{% url 'view_answers' %}" class="button">View Answers</a>
+
+</div>
+
+
+
+{% endblock %}
