@@ -16,18 +16,22 @@ class CreateQuestionForm(forms.ModelForm):
         
 class AnswerTextQuestionForm(forms.ModelForm):
     text = forms.CharField(widget=forms.Textarea(attrs={'class': 'text-input'}))
+    questionID = forms.IntegerField(widget=forms.HiddenInput())
 
     class Meta:
         model = Question
         fields = [
-            'text'
+            'text',
+            'questionID'
         ]
         
 class AnswerLikertQuestionForm(forms.ModelForm):
     value = forms.IntegerField()
+    questionID = forms.IntegerField(widget=forms.HiddenInput())
 
     class Meta:
         model = Question
         fields = [
-            'value'
+            'value',
+            'questionID'
         ]
