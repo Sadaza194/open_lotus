@@ -7,9 +7,15 @@
 <hr>
 
 <div class="splashMenu">
-    <a href="{% url 'answer_question' %}" class="button">Answer Question</a>
+    <a href="{% url 'answer_likert_question' %}" class="button">Answer Likert Question</a>
+    <br>
+    <a href="{% url 'answer_text_question' %}" class="button">Answer Text Question</a>
     <br>
     <a href="{% url 'view_answers' %}" class="button">View Answers</a>
+    <br>
+    {%if admin %}
+    <a href="{% url 'create_question' %}" class="button">Create Question</a>
+    {% endif %}
 
 </div>
 
