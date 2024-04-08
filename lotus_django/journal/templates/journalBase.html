@@ -1,0 +1,18 @@
+{% extends "base.html"%}
+
+{% block content %}
+
+<h2> Memories </h2>
+
+<hr>
+
+<div class="splashMenu">
+    <a href="{% url 'create_journal' %}" class="button">Create Journal</a>
+    <br>
+    <a href="{% url 'view_journals' %}" class="button">View Journals</a>
+
+</div>
+
+
+
+{% endblock %}

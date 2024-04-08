@@ -4,13 +4,29 @@ from django.contrib import messages
 from django.utils import timezone
 from .forms import JournalForm
 from django.contrib.auth.decorators import login_required
+from journal.models import Journal
+
+
 
 
 
 # Create your views here.
 
 @login_required(login_url='login/')
-def journal(request):
+def journal_base(request, *args, **kwargs):
+    context = {}
+    return render(request, 'journalBase.html', context)
+
+@login_required(login_url='login/')
+def view_journals(request, *args, **kwargs):
+    user_journals = Journal.objects.all().filter(user=request.user)
+    context = {
+        "journals":user_journals
+    }
+    return render(request, 'viewJournals.html', context)
+
+@login_required(login_url='login/')
+def create_journal(request):
     if request.method == 'POST':
         form = JournalForm(request.POST)
         if form.is_valid():
@@ -22,4 +38,4 @@ def journal(request):
             return redirect('home')
     else:
         form = JournalForm()
-    return render(request, 'journal.html', {'form': form})
+    return render(request, 'createJournal.html', {'form': form})

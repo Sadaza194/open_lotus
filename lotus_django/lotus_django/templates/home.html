@@ -2,7 +2,18 @@
 {% load static %}
 
 {% block content %}
-            
+<style>
+    .button {
+        width: 80%;
+    }
+    .buttonBeige {
+        width: 80%;
+    }
+    .buttonSmall {
+        width: 40%;
+    }
+</style>
+
 <div class="background"></div>
 
 <div class="splashMenu">
@@ -10,16 +21,16 @@
     {%if admin %}
     <a href="{% url 'create_question' %}" class="button">Create Question</a>
     {% endif %}
-    <a href="{% url 'journal' %}" class="button">Journal</a>
+    <a href="{% url 'journal_base' %}" class="button">Journal</a>
     <a href="{% url 'memories_base' %}" class="button">Memories</a>
     <br>
     <br>
     <br>
     <br>
     <a href="{% url 'settings' %}" class="buttonSmall" style="padding: 10px 25px;">Settings</a>
+    <a href="{% url 'admin:index' %}" class="buttonSmall" style="padding: 10px 25px;">Admin</a>
 
     <br>
-    <a id="topButton" href="#top"> Go to Top </a>
 </div>
 
 

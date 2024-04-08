@@ -37,7 +37,7 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
-    'lotus.apps.LotusConfig',
+    'lotus',
     'report',
     'memories',
     'questions',
@@ -45,6 +45,7 @@ INSTALLED_APPS = [
 ]
 
 MIDDLEWARE = [
+    'django_user_agents.middleware.UserAgentMiddleware',
     'django.middleware.security.SecurityMiddleware',
     'django.contrib.sessions.middleware.SessionMiddleware',
     'django.middleware.common.CommonMiddleware',
@@ -63,9 +64,14 @@ TEMPLATES = [
         'APP_DIRS': True,
         'OPTIONS': {
             'context_processors': [
-                'django.template.context_processors.debug',
+                'lotus.context_processors.mobile',
+                'journal.context_processors.mobile',
+                'memories.context_processors.mobile',
+                'report.context_processors.mobile',
+                'questions.context_processors.mobile',
                 'django.template.context_processors.request',
                 'django.contrib.auth.context_processors.auth',
+                'django.template.context_processors.debug',
                 'django.contrib.messages.context_processors.messages',
             ],
         },
