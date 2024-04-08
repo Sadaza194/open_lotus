@@ -17,21 +17,16 @@ class QuestionTracker(models.Model):
     question = models.ForeignKey(Question, on_delete=models.CASCADE)
     date = models.DateTimeField(auto_now_add=True)
 
-    
-class Answer(models.Model):
-    answer_id = models.AutoField(primary_key=True)
+
+class LikertAnswer(models.Model):
     question = models.ForeignKey(Question, on_delete=models.CASCADE)
     user = models.ForeignKey(User, on_delete=models.CASCADE)
     date = models.DateTimeField(auto_now_add=True)
-
-    
-class LikertAnswer(models.Model):
-    likert_id = models.AutoField(primary_key=True)
-    answer = models.ForeignKey(Answer, on_delete=models.CASCADE)
     value = models.IntegerField()
 
 
 class TextAnswer(models.Model):
-    text_id = models.AutoField(primary_key=True)
-    answer = models.ForeignKey(Answer, on_delete=models.CASCADE)
+    question = models.ForeignKey(Question, on_delete=models.CASCADE)
+    user = models.ForeignKey(User, on_delete=models.CASCADE)
+    date = models.DateTimeField(auto_now_add=True)
     text = models.CharField(max_length=30)
