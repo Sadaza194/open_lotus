@@ -19,32 +19,25 @@
                 {% for i in "12345"|make_list %}
                 <div style="display: flex; flex-direction: column;">
                     <label for="{{ i }}">{{ i }} - ({{ likert_scale.i }})</label>
-                    <input type="radio" id="{{ i }}" name="answer" value="{{ i }}">
+                    <input type="radio" id="{{ i }}" name="likert_answer" value="{{ i }}">
                 </div>
                 {% endfor %}
             </div>
 
             <div>
                 <input class="buttonSmall" type="submit" value="Next Question">
+                <input class="buttonSmall" type="button" onclick="location.href='{% url 'answer_likert_question' %}';" value="Skip Question">
+
             </div>
         </form>
     {% else %}
         <p>No more questions.</p>
     {% endif %}
         
-
-    <br>
     <br>
 
-
-
-<br>
-
-<br>
-
-<br>
-<!-- <a id="topButton" href="#top"> Go to Top </a> -->
-</div>
-
+    <div>
+        <button class="buttonSmall" onclick="location.href='{% url 'home' %}';">Home</button>
+    </div>
 
 {% endblock %}

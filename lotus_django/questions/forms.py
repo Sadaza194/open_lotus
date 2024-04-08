@@ -24,10 +24,10 @@ class AnswerTextQuestionForm(forms.ModelForm):
         ]
         
 class AnswerLikertQuestionForm(forms.ModelForm):
-    value = forms.IntegerField()
+    likert_answer = forms.ChoiceField(choices=[(i, i) for i in range(1, 6)])
 
     class Meta:
         model = LikertAnswer
         fields = [
-            'value',
+            'likert_answer',
         ]

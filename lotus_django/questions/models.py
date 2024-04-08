@@ -22,7 +22,7 @@ class LikertAnswer(models.Model):
     question = models.ForeignKey(Question, on_delete=models.CASCADE)
     user = models.ForeignKey(User, on_delete=models.CASCADE)
     date = models.DateTimeField(auto_now_add=True)
-    value = models.IntegerField()
+    likert_answer = models.IntegerField()
 
 
 class TextAnswer(models.Model):
