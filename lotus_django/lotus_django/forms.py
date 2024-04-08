@@ -4,7 +4,10 @@ from django.contrib.auth.models import User
 from django.forms import DateInput
 
 class NewUserForm(UserCreationForm):
-    email = forms.EmailField(required=True)
+    email = forms.EmailField(required=True, widget=forms.EmailInput(attrs={'class': 'textField'}))
+    username = forms.CharField(widget=forms.TextInput(attrs={'class': 'textField'}))
+    password1 = forms.CharField(widget=forms.PasswordInput(attrs={'class': 'textField'}))
+    password2 = forms.CharField(widget=forms.PasswordInput(attrs={'class': 'textField'}))
 
     class Meta:
         model = User
