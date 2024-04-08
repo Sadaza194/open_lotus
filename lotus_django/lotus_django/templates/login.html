@@ -2,21 +2,6 @@
 
 {% block content %}
 
-<h2>Login</h2>
-
-<!-- <div class="splashMenu">
-    <a class="buttonLogin" style="text-align: right;"> 
-        Email: 
-        <input type="text" id="username" name="username">
-        <br>
-        Password:
-        <input type="text" id="password" name="password">
-    </a>
-    <br>
-
-    <a class="buttonSmall">Login</a>
-</div> -->
-
 <center>
 
     <b><h2>Login here</h2></b>
@@ -30,17 +15,7 @@
             {{ forms.label_tag }} <br>
             {{ forms }} {{ forms.errors }}<br>
         {% endfor %}
-        <button style="background-color: blanchedalmond; 
-  border: none;
-  color: black;
-  padding: 10px 20px;
-  text-align: center;
-  text-decoration: none;
-  display: inline-block;
-  border-radius: 10px;
-  font-size: 16px;
-  margin: 4px 2px;
-  cursor: pointer;" type="submit">Login
+        <button class="buttonSmall" type="submit">Login
         </button>
         <div>
         </div>

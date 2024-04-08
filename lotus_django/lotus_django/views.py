@@ -3,6 +3,7 @@ from django.shortcuts import render, redirect
 from django.contrib.auth.decorators import login_required
 from django import forms
 from .forms import NewUserForm
+from .forms import CustomAuthenticationForm
 from django.contrib import messages
 from django.contrib.auth.forms import AuthenticationForm
 
@@ -28,7 +29,7 @@ def register(request, *args, **kwargs):
 
 def login_user(request):
     if request.method == "POST":
-        form = AuthenticationForm(request=request, data=request.POST)
+        form = CustomAuthenticationForm(request=request, data=request.POST)
         if form.is_valid():
             username = form.cleaned_data.get("username")
             password = form.cleaned_data.get("password")
@@ -40,7 +41,7 @@ def login_user(request):
                 messages.error(request, "invalid username or password")
         else:
             messages.error(request, "invalid credential")
-    form = AuthenticationForm()
+    form = CustomAuthenticationForm()
     context = {"form": form}
     templates = "login.html"
     return render(request, templates, context)

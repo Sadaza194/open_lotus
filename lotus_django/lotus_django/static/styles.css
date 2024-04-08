@@ -148,7 +148,7 @@ label{
 }
 
 
-.button, .buttonBeige, .buttonSmall, .buttonLogin{
+.button, .buttonBeige, .buttonSmall{
     background-color: darkgray;
     border: 2px solid beige;
     color: beige;
@@ -267,7 +267,7 @@ label{
     align-items: center;
 }
 
-.textField{
+.buttonLogin{
     background-color: beige;
     border:5px rgb(53, 53, 53, 0.6) solid;
     border-radius: 12px;
@@ -277,5 +277,5 @@ label{
     display: block;
     font-size: 12px;
     margin: 4px 2px;
-    cursor: pointer;
+    cursor: text;
 }
