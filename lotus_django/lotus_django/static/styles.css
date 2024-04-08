@@ -148,7 +148,7 @@ label{
 }
 
 
-.button, .buttonBeige, .buttonSmall{
+.button, .buttonBeige, .buttonSmall, .dropdown{
     background-color: darkgray;
     border: 2px solid beige;
     color: beige;
@@ -186,6 +186,11 @@ label{
     background-color: darkgray;
     color: beige;
 }
+
+.dropdown {
+    width: 40%;
+}
+
 
 .background {
     /* height: 100vh; */
