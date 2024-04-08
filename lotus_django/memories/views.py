@@ -10,7 +10,10 @@ from memories.models import Memory
 
 @login_required(login_url='login/')
 def memories_base(request, *args, **kwargs):
-    context = {}
+    is_admin = request.user.is_superuser
+    context = {
+        "admin": is_admin
+    }
     return render(request, 'memoriesBase.html', context)
 
 @login_required(login_url='login/')

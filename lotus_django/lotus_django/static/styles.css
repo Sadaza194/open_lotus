@@ -284,3 +284,16 @@ label{
     margin: 4px 2px;
     cursor: text;
 }
+
+.dropdown {
+    background-color: beige;
+    border:5px rgb(53, 53, 53, 0.6) solid;
+    border-radius: 12px;
+    color: dimgrey;
+    font-size: 25px;
+    padding: 5px 15px;
+    display: block;
+    font-size: 12px;
+    margin: 4px 2px;
+    cursor: text;
+}

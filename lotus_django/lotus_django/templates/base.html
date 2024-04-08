@@ -40,8 +40,6 @@ p{
     color: beige;
 }
 
-
-
 @media (max-width: 600px) {
     .navBar {
         flex-wrap: wrap;
@@ -67,7 +65,7 @@ p{
             {% endif %}
             {% if not mobile %}
                 <a href="{% url 'home' %}"><strong>Home</strong></a>
-                <a href="{% url 'questions' %}"><strong>Questions</strong></a>
+                <a href="{% url 'questionsBase' %}"><strong>Questions</strong></a>
                 <a href="{% url 'journal_base' %}"><strong>Journal</strong></a>
                 <a href="{% url 'memories_base' %}"><strong>Memories</strong></a>
 

@@ -14,7 +14,10 @@ from journal.models import Journal
 
 @login_required(login_url='login/')
 def journal_base(request, *args, **kwargs):
-    context = {}
+    is_admin = request.user.is_superuser
+    context = {
+        "admin": is_admin
+    }
     return render(request, 'journalBase.html', context)
 
 @login_required(login_url='login/')

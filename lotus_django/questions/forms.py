@@ -1,5 +1,5 @@
 from django import forms
-from .models import Question
+from .models import Question, LikertAnswer, TextAnswer
 
 class CreateQuestionForm(forms.ModelForm):
     type = forms.CharField(widget=forms.TextInput(attrs={'class': 'text-input'}))
@@ -16,22 +16,18 @@ class CreateQuestionForm(forms.ModelForm):
         
 class AnswerTextQuestionForm(forms.ModelForm):
     text = forms.CharField(widget=forms.Textarea(attrs={'class': 'text-input'}))
-    questionID = forms.IntegerField(widget=forms.HiddenInput())
 
     class Meta:
-        model = Question
+        model = TextAnswer
         fields = [
             'text',
-            'questionID'
         ]
         
 class AnswerLikertQuestionForm(forms.ModelForm):
     value = forms.IntegerField()
-    questionID = forms.IntegerField(widget=forms.HiddenInput())
 
     class Meta:
-        model = Question
+        model = LikertAnswer
         fields = [
             'value',
-            'questionID'
         ]
