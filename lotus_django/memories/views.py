@@ -25,20 +25,14 @@ def view_memories(request, *args, **kwargs):
 def create_memory(request):
     print(request.method)
     if request.method == 'POST':
-        print("post request")
         form = MemoryForm(request.POST or None)
-        print("after form")
         if form.is_valid():
-            print("form is valid")
             memory = form.save(commit=False)
             memory.user = request.user
             memory.date = timezone.now()
             memory.save()
             messages.success(request, 'Memory saved!')
             return redirect('home')
-        else:
-            print(form.errors)
     else:
         form = MemoryForm()
-        print(form.errors)
     return render(request, 'createMemory.html', {'form': form})
