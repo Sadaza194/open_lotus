@@ -17,7 +17,7 @@ from django.contrib import admin
 from django.urls import path, include
 from . import views
 from .views import register, login_user, logout_request
-from questions.views import create_question
+
 
 urlpatterns = [
     path('admin/', admin.site.urls),
