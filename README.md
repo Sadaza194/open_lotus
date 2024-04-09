@@ -11,8 +11,9 @@ Lotus Three project
 5. Then get into the OPEN_LOTUS folder.
 6. Once there type `python -m pip install -r requirementes`. This will install the libraries required to run the app.
 7. Type then `cd lotus_django` 
-8. Once in there type `python manage.py runserver`
-9. In the command prompt that follows that command you will find an url; it will look something like this: "http://127.0.0.1:8000/" although it may be diferent. Copy and paste in your browser. Now the app will be deployed and you will be able to interact with it. 
+8. Migrate the database `python manage.py migrate`
+9. Once in there type `python manage.py runserver`
+10. In the command prompt that follows that command you will find an url; it will look something like this: "http://127.0.0.1:8000/" although it may be diferent. Copy and paste in your browser. Now the app will be deployed and you will be able to interact with it. 
 
 
 ## File Structure
