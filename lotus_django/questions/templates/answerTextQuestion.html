@@ -14,9 +14,9 @@
             <h3>{{ text_question.text }}</h3>
             {{ form.text }}<br>
 
-            <div>
+            <div style="display: flex; flex-direction: row;">
                 <input class="buttonSmall" type="submit" value="Next Question">
-                <input class="buttonSmall" type="button" onclick="location.href='{% url 'answer_text_question' %}';" value="Skip Question">
+                <input class="buttonSmall" type="button" onclick="location.href='{% url 'home' %}';" value="Home">
             </div>
         </form>
         {% else %}
