@@ -12,9 +12,6 @@
             {% csrf_token %}
             <h3>Question {{ text_question.id }} :</h3>
             <h3>{{ text_question.text }}</h3>
-
-            <p>Answer: </p>
-
             {{ form.text }}<br>
 
             <div>
@@ -22,16 +19,13 @@
                 <input class="buttonSmall" type="button" onclick="location.href='{% url 'answer_text_question' %}';" value="Skip Question">
             </div>
         </form>
-    {% else %}
+        {% else %}
         <p>No more questions.</p>
+        <br>
+        <div>
+            <button class="buttonSmall" onclick="location.href='{% url 'home' %}';">Home</button>
+        </div>
     {% endif %}
-
-    <br>
-
-    <div>
-        <button class="buttonSmall" onclick="location.href='{% url 'home' %}';">Home</button>
-    </div>
-
 </div>
 
 

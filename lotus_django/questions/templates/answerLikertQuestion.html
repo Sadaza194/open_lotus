@@ -15,8 +15,6 @@
             <h3>Question {{ likert_question.id }} :</h3>
             <h3>{{ likert_question.text }}</h3>
 
-            <p>-  Select an option from 1 to 5  -</p>
-
             <div style="display: flex; flex-direction: row;">
                 {% for i in "12345"|make_list %}
                 <div style="display: flex; flex-direction: column;">
@@ -37,12 +35,12 @@
         </form>
     {% else %}
         <p>No more questions.</p>
+        <br>
+        <div>
+            <button class="buttonSmall" onclick="location.href='{% url 'home' %}';">Home</button>
+        </div>
     {% endif %}
-        
-    <br>
+</div>
 
-    <div>
-        <button class="buttonSmall" onclick="location.href='{% url 'home' %}';">Home</button>
-    </div>
 
 {% endblock %}
