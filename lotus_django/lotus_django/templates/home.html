@@ -50,7 +50,9 @@
     <br>
     <br>
     <a href="{% url 'settings' %}" class="buttonSmall" style="padding: 10px 25px;">Settings</a>
-    <a href="{% url 'admin:index' %}" class="buttonSmall" style="padding: 10px 25px;">Admin</a>
+    {% if admin %}
+        <a href="{% url 'admin:index' %}" class="buttonSmall" style="padding: 10px 25px;">Admin</a>
+    {% endif %}
 
     <br>
 </div>
