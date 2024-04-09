@@ -130,9 +130,11 @@ def view_answers(request, *args, **kwargs):
 
 @login_required(login_url='login/')
 def likert_report(request, *args, **kwargs):
+    likert_questions = Question.objects.all().filter(type='likert')
     likert_answers = LikertAnswer.objects.all().filter(user=request.user)
     
     context = {
-        "likert_answers":likert_answers
+        "likert_answers":likert_answers,
+        "likert_questions":likert_questions,
     }
     return render(request, 'likertReport.html', context)
