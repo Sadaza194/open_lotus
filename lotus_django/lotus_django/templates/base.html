@@ -60,7 +60,6 @@ p{
             d.setTime(d.getTime() + (exdays*24*60*60*1000));
             let expires = "expires="+ d.toUTCString();
             document.cookie = cname + "=" + cvalue + ";" + expires + ";path=/";
-            console.log("COLOR")
         }
     
         function getCookie(cname) {
@@ -78,15 +77,41 @@ p{
             }
             return "";
         }
+
+        function setColor(color) {
+            let r = document.querySelector(':root')
+            setCookie("user-color", color, 3650)
+            let light = "#F5F5DC"
+            let med = "#A9A9A9"
+            let dark = "#696969"
+
+            if (color == "red"){
+                light = "#e0bfba"
+                med = "#ba8a8a"
+                dark = "#825252"
+            }
+            if (color == "blue"){
+                light = "#b6d4db"
+                med = "#97bdc7"
+                dark = "#5f7f87"
+            }
+            if (color == "green"){
+                light = "#bfe3bf"
+                med = "#7e947e"
+                dark = "#647364"
+            }
+            r.style.setProperty('--user-color_light', light)
+            r.style.setProperty('--user-color_med', med)
+            r.style.setProperty('--user-color_dark', dark)
+            
+        }
     
         function checkColorCookie() {
             let color = getCookie("user-color");
             if (color == "") {
-                color = "#F5F5DC"     
+                color = "default"     
             }
-            console.log("BSDFSDF")
-            let r = document.querySelector(':root')
-            r.style.setProperty('--user-color', color)
+            setColor(color)
         }
         checkColorCookie()
     </script>
