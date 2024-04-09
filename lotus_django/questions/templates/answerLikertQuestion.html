@@ -29,8 +29,7 @@
 
             <div style="display: flex; flex-direction: row;">
                 <input class="buttonSmall" type="submit" value="Next Question">
-                <input class="buttonSmall" type="button" onclick="location.href='{% url 'answer_likert_question' %}';" value="Skip Question">
-
+                <button class="buttonSmall" onclick="location.href='{% url 'home' %}';">Home</button>
             </div>
         </form>
     {% else %}

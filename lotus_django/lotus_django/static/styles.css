@@ -198,31 +198,6 @@ label{
 }
 
 
-.background {
-    /* height: 100vh; */
-    height: calc(120vh - 275px);
-    margin-top: 50px;
-    /* subtract the height of the header */
-    background-image: url("{% static 'scroll.jpg' %}");
-    background-size: cover;
-    background-repeat: no-repeat;
-    background-attachment: fixed;
-    -webkit-filter: grayscale(100%);
-    filter: grayscale(100%);
-    opacity: 0.3;
-    animation: scroll alternate 1920s linear infinite;
-}
-
-@keyframes scroll {
-    0% {
-        background-position: 0% 100%;
-    }
-
-    100% {
-        background-position: 100% 0%;
-    }
-}
-
 .loggedInUser{
     background-color: var(--user-color_light);
     border:5px rgb(53, 53, 53, 0.6) solid;
