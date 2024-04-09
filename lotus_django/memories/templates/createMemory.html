@@ -5,28 +5,30 @@
     {% csrf_token %}
     <h2>Create a Memory</h2>
     <hr>
-    <h3>Memory Emotion:</h3>
-    <select class="buttonSmall" name="emotion">
-        <option value="happy">Happy</option>
-        <option value="sad">Sad</option>
-        <option value="angry">Angry</option>
-        <option value="fearful">Fearful</option>
-        <option value="disgusted">Disgusted</option>
-        <option value="surprised">Surprised</option>
-        <option value="neutral">Neutral</option>
-        <option value="anxious">Anxious</option>
-        <option value="depressed">Depressed</option>
-        <option value="excited">Excited</option>
-        <option value="joyful">Joyful</option>
-        <option value="peaceful">Peaceful</option>
-        <option value="relaxed">Relaxed</option>
-        <option value="stressed">Stressed</option>
-        <option value="tired">Tired</option>
-    </select><br>
-    <br>
-    <h3>Memory Text:</h3>
-    <textarea name="text" class="text-input-memories"></textarea><br>
-    <input class="buttonSmall" type="submit" value="Submit">
+    <div style="align-items: center; justify-content: center; display: flex; flex-direction: column;">
+        <h3>Memory Emotion:</h3>
+        <select class="dropdown" name="emotion">
+            <option value="happy">Happy</option>
+            <option value="sad">Sad</option>
+            <option value="angry">Angry</option>
+            <option value="fearful">Fearful</option>
+            <option value="disgusted">Disgusted</option>
+            <option value="surprised">Surprised</option>
+            <option value="neutral">Neutral</option>
+            <option value="anxious">Anxious</option>
+            <option value="depressed">Depressed</option>
+            <option value="excited">Excited</option>
+            <option value="joyful">Joyful</option>
+            <option value="peaceful">Peaceful</option>
+            <option value="relaxed">Relaxed</option>
+            <option value="stressed">Stressed</option>
+            <option value="tired">Tired</option>
+        </select><br>
+        <br>
+        <h3>Memory Text:</h3>
+        <textarea name="text" class="text-input-memories"></textarea><br>
+        <input class="buttonSmall" type="submit" value="Submit">
+    </div>
 </form>
 
 {% endblock %}
