@@ -18,9 +18,6 @@
 
 <div class="splashMenu">
     <a href="{% url 'questions' %}" class="button">Questions</a>
-    {%if admin %}
-    <a href="{% url 'create_question' %}" class="button">Create Question</a>
-    {% endif %}
     <a href="{% url 'journal_base' %}" class="button">Journal</a>
     <a href="{% url 'memories_base' %}" class="button">Memories</a>
     <br>
