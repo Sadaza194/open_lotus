@@ -7,9 +7,14 @@
 <div class="splashMenu">
     <form id="userSettings">
         <label for="set-color">Color:</label>
-        <input type="color" id="set-color" name="set-color" value = "#F5F5DC">
+        <select class="dropdown" name="set-color" id="set-color">
+            <option value="default" selected>Default</option>
+            <option value="red">Red</option>
+            <option value="blue">Blue</option>
+            <option value="green">Green</option>
+        </select>
           <br>
-        <button type="button" onclick="confirmSettings();"> Confirm </button>
+        <button class="button" type="button" onclick="confirmSettings();"> Confirm </button>
       </form>
 </div>
 
@@ -19,11 +24,6 @@
         setColor(color)
     }
 
-    function setColor(color) {
-        let r = document.querySelector(':root')
-        r.style.setProperty('--user-color', color)
-        setCookie("user-color", color, 3650)
-    }
 </script>
 
 {% endblock %}
