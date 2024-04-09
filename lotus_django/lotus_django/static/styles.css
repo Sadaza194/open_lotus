@@ -1,3 +1,7 @@
+:root {
+    --user-color: beige;
+}
+
 body {
     background-color: rgb(147, 147, 147);
     background-repeat: no-repeat;
@@ -10,8 +14,8 @@ body {
 
 #topButton {
     background-color: darkgray;
-    border: 2px solid beige;
-    color: beige;
+    border: 2px solid var(--user-color);
+    color: var(--user-color);
     padding: 5px 5px;
     text-align: center;
     text-decoration: none;
@@ -25,7 +29,7 @@ body {
 }
 
 #topButton:hover {
-    background-color: beige;
+    background-color: var(--user-color);
     color: darkgray;
 }
 
@@ -44,7 +48,7 @@ body {
 }
 
 .navBar a{
-    background-color: beige;
+    background-color: var(--user-color);
     border:5px rgb(53, 53, 53, 0.6) solid;
     border-radius: 12px;
     color: darkgray;
@@ -58,7 +62,7 @@ body {
 
 .navBar a:hover{
     background-color: darkgray;
-    color: beige;
+    color: var(--user-color);
 }
 
 .splashMenu{
@@ -113,36 +117,36 @@ body {
 }
 
 h1{
-    color: beige;
+    color: var(--user-color);
     font-size: 48px;
     text-decoration: lightgrey underline;
     font-family:Verdana, Geneva, Tahoma, sans-serif;
 }
 
 h2{
-    color: beige;
+    color: var(--user-color);
     font-size: 28px;
 
 }
 
 h3{
-    color: beige;
+    color: var(--user-color);
 }
 
 h4{
-    color: beige;
+    color: var(--user-color);
 }
 
 h5{
-    color: beige;
+    color: var(--user-color);
 }
 
 p{
-    color: beige;
+    color: var(--user-color);
 }
 
 label{
-    color: beige;
+    color: var(--user-color);
     font-size: 20px;
     padding: 20px;
 }
@@ -150,8 +154,8 @@ label{
 
 .button, .buttonBeige, .buttonSmall, .dropdown{
     background-color: darkgray;
-    border: 2px solid beige;
-    color: beige;
+    border: 2px solid var(--user-color);
+    color: var(--user-color);
     padding: 25px 25px;
     text-align: center;
     text-decoration: none;
@@ -168,23 +172,23 @@ label{
 }
 
 .buttonSmall:hover {
-    background-color: beige;
+    background-color: var(--user-color);
     color: darkgray;
 }
 
 .buttonBeige {
-    background-color: beige;
+    background-color: var(--user-color);
     color: darkgray;
 }
 
 .button:hover {
-    background-color: beige;
+    background-color: var(--user-color);
     color: darkgray;
 }
 
 .buttonBeige:hover {
     background-color: darkgray;
-    color: beige;
+    color: var(--user-color);
 }
 
 .dropdown {
@@ -218,7 +222,7 @@ label{
 }
 
 .loggedInUser{
-    background-color: beige;
+    background-color: var(--user-color);
     border:5px rgb(53, 53, 53, 0.6) solid;
     border-radius: 12px;
     color: darkgray;
@@ -241,7 +245,7 @@ label{
     padding: 10px;
     margin-top: 50px;
     margin: 50px 20px 20px 20px;
-    background-color: beige;
+    background-color: var(--user-color);
     border: none;
     color:dimgrey;
     /* padding: 5px 15px; */
@@ -260,7 +264,7 @@ label{
     padding: 10px;
     margin-top: 50px;
     margin: 50px 20px 20px 20px;
-    background-color: beige;
+    background-color: var(--user-color);
     border: none;
     color:dimgrey;
     /* padding: 5px 15px; */
@@ -273,7 +277,7 @@ label{
 }
 
 .buttonLogin{
-    background-color: beige;
+    background-color: var(--user-color);
     border:5px rgb(53, 53, 53, 0.6) solid;
     border-radius: 12px;
     color: dimgrey;
@@ -286,7 +290,7 @@ label{
 }
 
 .dropdown {
-    background-color: beige;
+    background-color: var(--user-color);
     border:5px rgb(53, 53, 53, 0.6) solid;
     border-radius: 12px;
     color: dimgrey;
