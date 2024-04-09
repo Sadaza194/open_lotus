@@ -29,7 +29,7 @@
 
             <div style="display: flex; flex-direction: row;">
                 <input class="buttonSmall" type="submit" value="Next Question">
-                <button class="buttonSmall" onclick="location.href='{% url 'home' %}';">Home</button>
+                <input class="buttonSmall" type="button" onclick="location.href='{% url 'home' %}';" value="Home">
             </div>
         </form>
     {% else %}
