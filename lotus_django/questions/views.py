@@ -125,7 +125,7 @@ def view_answers(request, *args, **kwargs):
     likert_answers = LikertAnswer.objects.all().filter(user=request.user)
     
     context = {
-        "text":text_answers,
-        "likert":likert_answers
+        "text_answers":text_answers,
+        "likert_answers":likert_answers
     }
     return render(request, 'viewAnswers.html', context)
