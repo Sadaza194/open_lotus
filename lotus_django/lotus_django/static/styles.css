@@ -113,7 +113,7 @@ body {
     max-width: fit-content;
     max-height: fit-content;
     margin: auto;
-    position: absolute;
+    position: relative;
     font-size: 24px;
     top: 10%; right: 0; bottom: 0; left: 0;
 }
