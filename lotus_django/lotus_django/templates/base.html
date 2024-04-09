@@ -135,9 +135,10 @@ p{
 
     function checkColorCookie() {
         let color = getCookie("user-color");
-        if (color != "") {
-            r.style.setProperty('--user-color', color)
+        if (color == "") {
+            color = "#F5F5DC"     
         }
+        r.style.setProperty('--user-color', color)
     }
 </script>
 
