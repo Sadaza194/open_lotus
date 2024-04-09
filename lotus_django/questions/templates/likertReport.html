@@ -1,0 +1,26 @@
+{% extends 'base.html' %}
+
+{% block content %}
+
+
+<hr>
+<div>
+    <h2> Your Likert Answers: </h2>
+</div>
+
+<div>
+    {% for likert_answer in likert_answers %}
+    <div>
+        <h3> {{ likert_answer.question.text }} </h3>
+        <p> {{ likert_answer.date }} </p>
+        <p> {{ likert_answer.likert }} </p>
+
+    </div>
+
+    {% endfor %}
+</div>
+
+<a id="topButton" href="#top"> Go to Top </a>
+
+
+{% endblock %}

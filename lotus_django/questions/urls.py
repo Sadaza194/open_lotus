@@ -7,6 +7,7 @@ urlpatterns = [
     path("answer_likert/", views.answer_likert_question, name="answer_likert_question"),
     path("answer_text/", views.answer_text_question, name="answer_text_question"),
     path("view_answers/", views.view_answers, name="view_answers"),
+    path("likert_report/", views.likert_report, name="likert_report"),
     
 
 ]
