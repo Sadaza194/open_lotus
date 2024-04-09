@@ -47,6 +47,7 @@ body {
     position: absolute;
     top: 5px;
     margin: 5px;
+    box-shadow: var(--user-color_dark) 5px 5px 5px;
 }
 
 .navBar a{
@@ -81,6 +82,7 @@ body {
     margin: auto;
     position: absolute;
     top: 10%; right: 0; bottom: 0; left: 0;
+    box-shadow: var(--user-color_dark) 5px 5px 5px;
 }
 
 .splashBox{
@@ -98,6 +100,7 @@ body {
     position: absolute;
     font-size: 24px;
     top: 10%; right: 0; bottom: 0; left: 0;
+    box-shadow: var(--user-color_dark) 5px 5px 5px;
 }
 
 .questionBox{
@@ -116,31 +119,37 @@ body {
     position: relative;
     font-size: 24px;
     top: 10%; right: 0; bottom: 0; left: 0;
+    box-shadow: var(--user-color_dark) 5px 5px 5px;
 }
 
 h1{
     color: var(--user-color_light);
     font-size: 48px;
-    text-decoration: lightgrey underline;
+    text-shadow: var(--user-color_dark) 5px 5px 5px;
+    text-decoration: var(--user-color_med) underline;
     font-family:Verdana, Geneva, Tahoma, sans-serif;
 }
 
 h2{
     color: var(--user-color_light);
+    text-shadow: var(--user-color_dark) 3px 3px 3px;
     font-size: 28px;
 
 }
 
 h3{
     color: var(--user-color_light);
+    text-shadow: var(--user-color_dark) 2px 2px 2px;
 }
 
 h4{
     color: var(--user-color_light);
+    text-shadow: var(--user-color_dark) 2px 2px 2px;
 }
 
 h5{
     color: var(--user-color_light);
+    text-shadow: var(--user-color_dark) 2px 2px 2px;
 }
 
 p{
