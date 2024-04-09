@@ -1,0 +1,59 @@
+{% extends 'base.html' %}
+
+{% load static %}
+
+
+{% block content %}
+<style>
+    .button {
+        width: 80%;
+    }
+    .buttonBeige {
+        width: 80%;
+    }
+    .buttonSmall {
+        width: 40%;
+    }
+    .background {
+        /* height: 100vh; */
+        height: calc(120vh - 275px);
+        margin-top: 50px;
+        /* subtract the height of the header */
+        background-image: url("{% static 'scroll.jpg' %}");
+        background-size: cover;
+        background-repeat: no-repeat;
+        background-attachment: fixed;
+        -webkit-filter: grayscale(100%);
+        filter: grayscale(100%);
+        opacity: 0.3;
+        animation: scroll alternate 1920s linear infinite;
+    }
+    @keyframes scroll {
+        0% {
+            background-position: 0% 100%;
+        }
+    
+        100% {
+            background-position: 100% 0%;
+        }
+    }
+</style>
+
+<div class="background"></div>
+
+<div class="splashMenu">
+    <a href="{% url 'questionsBase' %}" class="button">Questions</a>
+    <a href="{% url 'journal_base' %}" class="button">Journal</a>
+    <a href="{% url 'memories_base' %}" class="button">Memories</a>
+    <br>
+    <br>
+    <br>
+    <br>
+    <a href="{% url 'settings' %}" class="buttonSmall" style="padding: 10px 25px;">Settings</a>
+    <a href="{% url 'admin:index' %}" class="buttonSmall" style="padding: 10px 25px;">Admin</a>
+
+    <br>
+</div>
+
+
+{% endblock %}

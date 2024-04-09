@@ -1,0 +1,28 @@
+{% extends 'base.html' %}
+
+{% block content %}
+
+
+
+<hr>
+<div>
+    <h2> Your Text Answers: </h2>
+
+</div>
+
+<div>
+    {% for text_answer in text_answers %}
+    <div>
+        <h3> {{ text_answer.question.text }} </h3>
+        <p> {{ text_answer.date }} </p>
+        <p> {{ text_answer.text }} </p>
+
+    </div>
+
+    {% endfor %}
+</div>
+
+<a id="topButton" href="#top"> Go to Top </a>
+
+
+{% endblock %}

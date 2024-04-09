@@ -1,0 +1,26 @@
+{% extends "base.html"%}
+
+{% block content %}
+<div>
+
+    <h2> Your Memories </h2>
+
+    <hr>
+
+</div>
+
+<div>
+{% for memory in memories %}
+<div>
+    <h3> {{ memory.date }} </h3>
+    <h4> Emotion: {{ memory.emotion }} </h4>
+    <p> {{memory.text}} </p>
+    <br>
+</div>
+{% endfor %}
+</div>
+
+<a id="topButton" href="#top"> Go to Top </a>
+
+
+{% endblock %}

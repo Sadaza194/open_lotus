@@ -1,0 +1,45 @@
+{% extends 'base.html' %}
+
+{% load dict_filter %}
+
+{% block content %}
+
+<h2>Likert Questions</h2>
+
+<div class="questionBox">
+
+
+    {% if likert_question %}
+        <form method="post">
+            {% csrf_token %}
+            <h3>Question {{ likert_question.id }} :</h3>
+            <h3>{{ likert_question.text }}</h3>
+
+            <div style="display: flex; flex-direction: row;">
+                {% for i in "12345"|make_list %}
+                <div style="display: flex; flex-direction: column;">
+                    <label for="{{ i }}">{{ i }} - {{ likert_scale|get_item:forloop.counter }}</label>
+                    <input type="radio" id="{{ i }}" name="likert" value="{{ i }}">
+                </div>
+                {% endfor %}
+
+            </div>
+            <br>
+            <br>
+
+            <div style="display: flex; flex-direction: row;">
+                <input class="buttonSmall" type="submit" value="Next Question">
+                <button class="buttonSmall" onclick="location.href='{% url 'home' %}';">Home</button>
+            </div>
+        </form>
+    {% else %}
+        <p>No more questions.</p>
+        <br>
+        <div>
+            <button class="buttonSmall" onclick="location.href='{% url 'home' %}';">Home</button>
+        </div>
+    {% endif %}
+</div>
+
+
+{% endblock %}

@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no">
+    <title>Open Lotus</title>
+
+    {% load static %}
+    <link rel="stylesheet" type="text/css" href="{% static 'styles.css' %}">
+    
+
+</head>
+<style>
+
+@media (max-width: 600px) {
+    .navBar {
+        flex-wrap: wrap;
+    }
+    .navBar a {
+        width: 90%;
+        text-align: center;
+    }
+}
+
+
+</style>
+<body>
+    <script>    
+        function setCookie(cname, cvalue, exdays) {
+            const d = new Date();
+            d.setTime(d.getTime() + (exdays*24*60*60*1000));
+            let expires = "expires="+ d.toUTCString();
+            document.cookie = cname + "=" + cvalue + ";" + expires + ";path=/";
+        }
+    
+        function getCookie(cname) {
+            let name = cname + "=";
+            let decodedCookie = decodeURIComponent(document.cookie);
+            let ca = decodedCookie.split(';');
+            for(let i = 0; i < ca.length; i++) {
+                let c = ca[i];
+                while (c.charAt(0) == ' ') {
+                c = c.substring(1);
+                }
+                if (c.indexOf(name) == 0) {
+                return c.substring(name.length, c.length);
+                }
+            }
+            return "";
+        }
+
+        function setColor(color) {
+            let r = document.querySelector(':root')
+            setCookie("user-color", color, 3650)
+            let light = "#F5F5DC"
+            let med = "#A9A9A9"
+            let dark = "#696969"
+
+            if (color == "red"){
+                light = "#dbbab6"
+                med = "#b07474"
+                dark = "#825252"
+            }
+            if (color == "blue"){
+                light = "#d6faff"
+                med = "#7da8b8"
+                dark = "#5f7f87"
+            }
+            if (color == "green"){
+                light = "#d3e8c8"
+                med = "#7e947e"
+                dark = "#647364"
+            }
+            r.style.setProperty('--user-color_light', light)
+            r.style.setProperty('--user-color_med', med)
+            r.style.setProperty('--user-color_dark', dark)
+            
+        }
+    
+        function checkColorCookie() {
+            let color = getCookie("user-color");
+            if (color == "") {
+                color = "default"     
+            }
+            setColor(color)
+        }
+        checkColorCookie()
+    </script>
+    <a id="top"></a>
+    
+    <div class="navBar">
+        {% if user.is_authenticated %}
+            {% if mobile %}
+                <a href="{% url 'home' %}"><strong>Home</strong></a>
+                <a href="{% url 'settings' %}"><strong>Welcome, {{ user.username }}!</strong></a>
+                <a href="{% url 'logout' %}"><strong>Logout</strong></a>
+            {% endif %}
+            {% if not mobile %}
+                <a href="{% url 'home' %}"><strong>Home</strong></a>
+                <a href="{% url 'questionsBase' %}"><strong>Questions</strong></a>
+                <a href="{% url 'journal_base' %}"><strong>Journal</strong></a>
+                <a href="{% url 'memories_base' %}"><strong>Memories</strong></a>
+
+                {% if admin %}
+                    <a style="position: absolute; right: 175px;" href="{% url 'settings' %}"><strong>Welcome, {{ user.username }}!</strong></a>
+                    <a style="position: absolute; right: 90px;" href="{% url 'admin:index' %}"><strong>Admin</strong></a>
+                    <a style="position: absolute; right: 5px;" href="{% url 'logout' %}"><strong>Logout</strong></a>
+                {% else %}
+                    <a style="position: absolute; right: 90px;" href="{% url 'settings' %}"><strong>Welcome, {{ user.username }}!</strong></a>
+                    <a style="position: absolute; right: 5px;" href="{% url 'logout' %}"><strong>Logout</strong></a>
+                {% endif %}
+            {% endif %}
+            
+
+
+        {% else %}
+            <!-- The below element holds space in order to ensure the navBar maintains the correct height,
+                    since the position: absolut elements below won't render the heigh in navBar -->
+            <a  style="opacity: 0;"><strong>BLANK</strong></a>
+
+            <a style="position: absolute; right: 220px;" href="{% url 'register' %}"><strong>Register</strong></a>
+            <a style="position: absolute; right: 80px;"><strong>Welcome, Guest!</strong></a>
+            <a style="position: absolute; right: 5px;" href="{% url 'login' %}"><strong>Login</strong></a>
+        {% endif %}
+
+    </div>
+
+
+
+    <br>
+    <br>
+    <div>
+        <h1>Open Lotus</h1>
+    </div>
+
+    {% block content %}
+    
+    
+
+    {% endblock %}
+
+
+</body>
+</html>

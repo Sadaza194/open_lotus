@@ -1,0 +1,26 @@
+{% extends "base.html"%}
+
+{% block content %}
+
+<h2> Questions </h2>
+
+<hr>
+
+<div class="splashMenu">
+    <a href="{% url 'answer_likert_question' %}" class="button">Answer Likert Question</a>
+    <br>
+    <a href="{% url 'answer_text_question' %}" class="button">Answer Text Question</a>
+    <br>
+    <a href="{% url 'view_answers' %}" class="button">View Answers</a>
+    <br>
+    <a href="{% url 'likert_report' %}" class="button">Likert Report</a>
+    <br>
+    {%if admin %}
+    <a href="{% url 'create_question' %}" class="button">Create Question</a>
+    {% endif %}
+
+</div>
+
+
+
+{% endblock %}

@@ -1,0 +1,30 @@
+{% extends 'base.html' %}
+
+{% block content %}
+            
+<h2>Settings</h2>
+
+
+    <form id="userSettings">
+        <div style="align-items: center; justify-content: center; display: flex; flex-direction: column;">
+        <label for="set-color">Color:</label>
+        <select class="dropdown" name="set-color" id="set-color">
+            <option value="default" selected>Default</option>
+            <option value="red">Red</option>
+            <option value="blue">Blue</option>
+            <option value="green">Green</option>
+        </select>
+        <br>
+        <button class="buttonSmall" type="button" onclick="confirmSettings();"> Confirm </button>
+        </div>
+    </form>
+
+<script>
+    function confirmSettings() {
+        color = document.getElementById("userSettings").elements["set-color"].value
+        setColor(color)
+    }
+
+</script>
+
+{% endblock %}

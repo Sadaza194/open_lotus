@@ -1,0 +1,32 @@
+{% extends 'base.html' %}
+
+
+{% block content %}
+
+<h2>Text Questions</h2>
+
+<div class="questionBox">
+
+    {% if text_question %}
+        <form method="post">
+            {% csrf_token %}
+            <h3>Question {{ text_question.id }} :</h3>
+            <h3>{{ text_question.text }}</h3>
+            {{ form.text }}<br>
+
+            <div style="display: flex; flex-direction: row;">
+                <input class="buttonSmall" type="submit" value="Next Question">
+                <input class="buttonSmall" type="button" onclick="location.href='{% url 'home' %}';" value="Home">
+            </div>
+        </form>
+        {% else %}
+        <p>No more questions.</p>
+        <br>
+        <div>
+            <button class="buttonSmall" onclick="location.href='{% url 'home' %}';">Home</button>
+        </div>
+    {% endif %}
+</div>
+
+
+{% endblock %}

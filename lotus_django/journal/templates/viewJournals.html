@@ -1,0 +1,26 @@
+{% extends "base.html"%}
+
+{% block content %}
+<div>
+
+    <h2> Your Journals </h2>
+
+    <hr>
+
+</div>
+
+<div>
+{% for journal in journals %}
+<div>
+    <h3> {{ journal.date }} </h3>
+    <p> {{journal.text}} </p>
+    <br>
+</div>
+{% endfor %}
+</div>
+
+<a id="topButton" href="#top"> Go to Top </a>
+
+
+{% endblock %}
+

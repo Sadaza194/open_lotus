@@ -1,0 +1,22 @@
+{% extends 'base.html' %}
+
+{% block content %}          
+<h2>Create a new Question</h2>  
+<form method='POST'> 
+    {% csrf_token %}
+    <!-- {{ form.as_p }} -->
+    <select class="buttonSmall" name='type'>
+        <option value='text'>Text</option>
+        <option value='likert'>Likert</option>
+    </select><br>
+    <select class="buttonSmall" name='frequency'>
+        <option value='daily'>Daily</option>
+        <option value='weekly'>Weekly</option>
+        <option value='monthly'>Monthly</option>
+        <option value='yearly'>Yearly</option>
+    </select><br>
+    <textarea name='text', class="text-input-memories", placeholder='Question text...'/></textarea><br>
+    <input class="buttonSmall" type='submit', value='Submit'>
+</form>
+
+{% endblock %}

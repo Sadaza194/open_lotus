@@ -1,0 +1,25 @@
+{% extends 'base.html' %}
+
+{% load static %}
+<link rel="stylesheet" type="text/css" href="{% static 'styles.css' %}">
+
+{% block content %}
+    {% block title %}
+    <center>
+    <b>
+    <h2>Create an account here</h2>
+    </b>
+    {% endblock %}
+    
+    <form class="form" method="POST">
+        {% csrf_token %}
+        {% for field in form %}
+        {{ field.label_tag }}<br>
+        {{ field }} {{ field.errors }}<br>
+
+        {% endfor %}
+        <button class="buttonSmall" type="submit">Signup</button><br>
+        Existing User <a href="{% url 'login' %}">Login</a> here
+    </form>
+</center>
+{% endblock %}

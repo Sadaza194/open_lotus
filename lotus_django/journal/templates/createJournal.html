@@ -1,0 +1,20 @@
+{% extends 'base.html' %}
+
+{% block content %}
+
+<h2>Journal</h2>
+
+
+<h3>New Journal Entry:</h3>
+
+<form method="POST">
+    {% csrf_token %}
+    {{ form.text }}
+    <br>
+    <input class="buttonSmall" type="submit" value="Submit">
+</form>
+
+
+
+
+{% endblock %}
