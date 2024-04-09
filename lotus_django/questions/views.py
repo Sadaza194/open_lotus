@@ -33,6 +33,9 @@ def questionsBase(response):
 
 @login_required(login_url='login/')
 def answer_likert_question(request, *args, **kwargs):
+
+
+    
     # Load all likert questions
     likert_questions = Question.objects.all().filter(type='likert')
 
@@ -62,9 +65,18 @@ def answer_likert_question(request, *args, **kwargs):
     # Create a new form for the current question
     form = AnswerLikertQuestionForm()
 
+    likert_scale = {
+        1: 'Strongly Disagree',
+        2: 'Disagree',
+        3: 'Neutral',
+        4: 'Agree',
+        5: 'Strongly Agree'
+    }
+
     context = {
         'form': form,
-        'likert_question': current_question
+        'likert_question': current_question,
+        'likert_scale': likert_scale
     }
 
     return render(request, 'answerLikertQuestion.html', context)
@@ -113,7 +125,7 @@ def view_answers(request, *args, **kwargs):
     likert_answers = LikertAnswer.objects.all().filter(user=request.user)
     
     context = {
-        "text":text_answers,
-        "likert":likert_answers
+        "text_answers":text_answers,
+        "likert_answers":likert_answers
     }
     return render(request, 'viewAnswers.html', context)
