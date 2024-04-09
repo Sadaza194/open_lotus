@@ -18,8 +18,8 @@
             <div style="display: flex; flex-direction: row;">
                 {% for i in "12345"|make_list %}
                 <div style="display: flex; flex-direction: column;">
-                    <label for="{{ i }}">{{ i }} - ({{ likert_scale.i }})</label>
-                    <input type="radio" id="{{ i }}" name="likert_answer" value="{{ i }}">
+                    <label for="{{ i }}">{{ i }} - ({{ likert_scale[i] }})</label>
+                    <input type="radio" id="{{ i }}" name="likert" value="{{ i }}">
                 </div>
                 {% endfor %}
             </div>
