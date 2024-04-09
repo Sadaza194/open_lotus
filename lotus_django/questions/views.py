@@ -33,16 +33,10 @@ def questionsBase(response):
 
 @login_required(login_url='login/')
 def answer_likert_question(request, *args, **kwargs):
-
-
-    
-    # Load all likert questions
     likert_questions = Question.objects.all().filter(type='likert')
 
-    # Get the current question index from the session
     current_index = request.session.get('current_likert_index', 0)
 
-    # Get the current question
     current_question = likert_questions[current_index] if current_index < len(likert_questions) else None
 
     if request.method == 'POST':
@@ -55,14 +49,11 @@ def answer_likert_question(request, *args, **kwargs):
             answer.save()
             messages.success(request, 'Likert answer saved!')
 
-            # Increment the current question index
             current_index += 1
             request.session['current_likert_index'] = current_index
 
-            # Redirect to the same view to load the next question
             return redirect('answer_likert_question')
 
-    # Create a new form for the current question
     form = AnswerLikertQuestionForm()
 
     likert_scale = {
@@ -83,13 +74,10 @@ def answer_likert_question(request, *args, **kwargs):
 
 @login_required(login_url='login/')
 def answer_text_question(request, *args, **kwargs):
-    # Load all text questions
     text_questions = Question.objects.all().filter(type='text')
 
-    # Get the current question index from the session
     current_index = request.session.get('current_text_index', 0)
 
-    # Get the current question
     current_question = text_questions[current_index] if current_index < len(text_questions) else None
 
     if request.method == 'POST':
@@ -102,14 +90,11 @@ def answer_text_question(request, *args, **kwargs):
             answer.save()
             messages.success(request, 'Text answer saved!')
 
-            # Increment the current question index
             current_index += 1
             request.session['current_text_index'] = current_index
 
-            # Redirect to the same view to load the next question
             return redirect('answer_text_question')
 
-    # Create a new form for the current question
     form = AnswerTextQuestionForm()
 
     context = {
