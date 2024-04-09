@@ -51,7 +51,7 @@ body {
 
 .navBar a{
     background-color: var(--user-color_light);
-    border:5px rgb(53, 53, 53, 0.6) solid;
+    border:5px rgb(53, 53, 53, 0.3) solid;
     border-radius: 12px;
     color: var(--user-color_med);
     font-size: 25px;
