@@ -1,5 +1,7 @@
 :root {
-    --user-color: beige;
+    --user-color_light: beige;
+    --user-color_med: darkgray;
+    --user-color_dark: dimgrey;
 }
 
 body {
@@ -13,9 +15,9 @@ body {
 }
 
 #topButton {
-    background-color: darkgray;
-    border: 2px solid var(--user-color);
-    color: var(--user-color);
+    background-color: var(--user-color_med);
+    border: 2px solid var(--user-color_light);
+    color: var(--user-color_light);
     padding: 5px 5px;
     text-align: center;
     text-decoration: none;
@@ -29,8 +31,8 @@ body {
 }
 
 #topButton:hover {
-    background-color: var(--user-color);
-    color: darkgray;
+    background-color: var(--user-color_light);
+    color: var(--user-color_med);
 }
 
 .navBar{
@@ -48,10 +50,10 @@ body {
 }
 
 .navBar a{
-    background-color: var(--user-color);
+    background-color: var(--user-color_light);
     border:5px rgb(53, 53, 53, 0.6) solid;
     border-radius: 12px;
-    color: darkgray;
+    color: var(--user-color_med);
     font-size: 25px;
     padding: 5px 15px;
     display: block;
@@ -61,8 +63,8 @@ body {
 }
 
 .navBar a:hover{
-    background-color: darkgray;
-    color: var(--user-color);
+    background-color: var(--user-color_med);
+    color: var(--user-color_light);
 }
 
 .splashMenu{
@@ -117,45 +119,45 @@ body {
 }
 
 h1{
-    color: var(--user-color);
+    color: var(--user-color_light);
     font-size: 48px;
     text-decoration: lightgrey underline;
     font-family:Verdana, Geneva, Tahoma, sans-serif;
 }
 
 h2{
-    color: var(--user-color);
+    color: var(--user-color_light);
     font-size: 28px;
 
 }
 
 h3{
-    color: var(--user-color);
+    color: var(--user-color_light);
 }
 
 h4{
-    color: var(--user-color);
+    color: var(--user-color_light);
 }
 
 h5{
-    color: var(--user-color);
+    color: var(--user-color_light);
 }
 
 p{
-    color: var(--user-color);
+    color: var(--user-color_light);
 }
 
 label{
-    color: var(--user-color);
+    color: var(--user-color_light);
     font-size: 20px;
     padding: 20px;
 }
 
 
 .button, .buttonBeige, .buttonSmall, .dropdown{
-    background-color: darkgray;
-    border: 2px solid var(--user-color);
-    color: var(--user-color);
+    background-color: var(--user-color_med);
+    border: 2px solid var(--user-color_light);
+    color: var(--user-color_light);
     padding: 25px 25px;
     text-align: center;
     text-decoration: none;
@@ -172,23 +174,23 @@ label{
 }
 
 .buttonSmall:hover {
-    background-color: var(--user-color);
-    color: darkgray;
+    background-color: var(--user-color_light);
+    color: var(--user-color_med);
 }
 
 .buttonBeige {
-    background-color: var(--user-color);
-    color: darkgray;
+    background-color: var(--user-color_light);
+    color: var(--user-color_med);
 }
 
 .button:hover {
-    background-color: var(--user-color);
-    color: darkgray;
+    background-color: var(--user-color_light);
+    color: var(--user-color_med);
 }
 
 .buttonBeige:hover {
-    background-color: darkgray;
-    color: var(--user-color);
+    background-color: var(--user-color_med);
+    color: var(--user-color_light);
 }
 
 .dropdown {
@@ -222,10 +224,10 @@ label{
 }
 
 .loggedInUser{
-    background-color: var(--user-color);
+    background-color: var(--user-color_light);
     border:5px rgb(53, 53, 53, 0.6) solid;
     border-radius: 12px;
-    color: darkgray;
+    color: var(--user-color_med);
     font-size: 25px;
     font-size: 12px;
 
@@ -245,9 +247,9 @@ label{
     padding: 10px;
     margin-top: 50px;
     margin: 50px 20px 20px 20px;
-    background-color: var(--user-color);
+    background-color: var(--user-color_light);
     border: none;
-    color:dimgrey;
+    color:var(--user-color_dark);
     /* padding: 5px 15px; */
     /* text-align: center; */
     text-decoration: none;
@@ -264,9 +266,9 @@ label{
     padding: 10px;
     margin-top: 50px;
     margin: 50px 20px 20px 20px;
-    background-color: var(--user-color);
+    background-color: var(--user-color_light);
     border: none;
-    color:dimgrey;
+    color:var(--user-color_dark);
     /* padding: 5px 15px; */
     /* text-align: center; */
     text-decoration: none;
@@ -277,10 +279,10 @@ label{
 }
 
 .buttonLogin{
-    background-color: var(--user-color);
+    background-color: var(--user-color_light);
     border:5px rgb(53, 53, 53, 0.6) solid;
     border-radius: 12px;
-    color: dimgrey;
+    color: var(--user-color_dark);
     font-size: 25px;
     padding: 5px 15px;
     display: block;
@@ -290,10 +292,10 @@ label{
 }
 
 .dropdown {
-    background-color: var(--user-color);
+    background-color: var(--user-color_light);
     border:5px rgb(53, 53, 53, 0.6) solid;
     border-radius: 12px;
-    color: dimgrey;
+    color: var(--user-color_dark);
     font-size: 25px;
     padding: 5px 15px;
     display: block;
